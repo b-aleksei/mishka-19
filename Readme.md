@@ -1,7 +1,7 @@
 # Личный проект «Мишка» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
-* Студент: [Алексей](https://up.htmlacademy.ru/adaptive/18/user/1189207).
-* Наставник: `Неизвестно`.
+* Студент: [Бугаев Алексей](https://up.htmlacademy.ru/adaptive/18/user/1189207).
+* Наставник: `Антон Шабельников`.
 
 ---
 
