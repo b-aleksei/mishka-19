@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap&subset=cyrillic" rel="stylesheet">
+  <!--  <link rel="stylesheet" href="css/style.css">-->
+</head>
+<body>
+<div class="container">
+  <header>
+    <div class="header">
+      <div class="logo">
+        <a><img src="img/logo.svg" alt="логотип" width="" height=""></a>
+      </div>
+      <button class="header__menu-opener" type="button"></button>
+      <ul class="header__menu">
+        <li class="header__item">
+          <a class="header__link" href="catalog.html">Каталог товаров</a>
+        </li>
+        <li class="header__item">
+          <a class="header__link" href="catalog.html">Вязание на заказ</a>
+        </li>
+        <li class="header__item">
+          <input type="search" name="search" id="search">
+          <label for="search">Поиск по сайту</label>
+        </li>
+        <li class="header__item">
+          <a class="header__link" href="catalog.html">Корзина<span>: пока пуста</span></a>
+        </li>
+      </ul>
+    </div>
+  </header>
+  <main>
+    <section class="catalog-goods">
+      <h1 class="catalog-goods__title">Каталог товаров</h1>
+      <ul class="catalog-goods__list">
+        <li class="catalog-goods__item">
+          <figure class="catalog-goods__wrapper">
+            <a class="catalog-goods__link" href="rabbit.html"><img class="catalog-goods__picture" src="img/rabbit.jpg" width="" height="" alt="Зайчик-попрыгайчик"></a>
+            <figcaption class="catalog-goods__descriptions">
+              <a class="catalog-goods__name" href="rabbit.html">Зайчик-попрыгайчик</a>
+              <p class="catalog-goods__feature">Рост 30 см, вес 200 г</p>
+              <p class="catalog-goods__price">1 200 руб.</p>
+            </figcaption>
+          </figure>
+        </li>
+        <li class="catalog-goods__item">
+          <figure class="catalog-goods__wrapper">
+            <a class="catalog-goods__link" href="basket.html"><img class="catalog-goods__picture" src="img/basket.jpg" width="" height="" alt="Корзинка для белья"></a>
+            <figcaption class="catalog-goods__descriptions">
+              <a class="catalog-goods__name" href="basket.html">Корзинка для белья</a>
+              <p class="catalog-goods__feature">Диаметр 15 см, высота 10 см</p>
+              <p class="catalog-goods__price">690 руб.</p>
+            </figcaption>
+          </figure>
+        </li>
+        <li class="catalog-goods__item">
+          <figure class="catalog-goods__wrapper">
+            <a class="catalog-goods__link" href="big-basket.html"><img class="catalog-goods__picture" src="img/big-basket.jpg" width="" height="" alt="Большая корзинка для игрушек"></a>
+            <figcaption class="catalog-goods__descriptions">
+              <a class="catalog-goods__name" href="big-basket.html">Большая корзинка для игрушек</a>
+              <p class="catalog-goods__feature">Диаметр 30 см, высота 30 см</p>
+              <p class="catalog-goods__price">1 500 руб.</p>
+            </figcaption>
+          </figure>
+        </li>
+      </ul>
+    </section>
+    <section class="production">
+      <h2 class="production__title">Процесс производства</h2>
+      <div class="production__wrapper">
+        <iframe class="production__video" src="img/video.mp4"></iframe>
+      </div>
+      <p class="production__text">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как
+        появляются наши товары.</p>
+      <a class="production__button button" href="make-order.html">Сделать заказ</a><!--  needs uppercase-->
+    </section>
+  </main>
+  <footer>
+    <ul class="social-icon">
+      <li class="social-icon__item">
+        <a href=""><img src="" alt="мы в инстаграмм"></a>
+      </li>
+      <li class="social-icon__item">
+        <a href=""><img src="" alt="мы на фейсбуке"></a>
+      </li>
+      <li class="social-icon__item">
+        <a href=""><img src="" alt="мы в твиттере"></a>
+      </li>
+    </ul>
+    <div class="copyright">
+      <p class="copyright__text">Разработано</p>
+      <a class="copyright__logo" href="https://htmlacademy.ru/intensive/adaptive"><img src="" alt="логотип HTML-Academy"></a>
+    </div>
+  </footer>
+</div>
+</body>
+</html>
