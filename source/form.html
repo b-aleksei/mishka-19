@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>HTML Academy: Мишка</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap&subset=cyrillic" rel="stylesheet">
+  <!--    <link rel="stylesheet" href="css/style.css">-->
+</head>
+<body>
+<div class="container">
+  <header>
+    <div class="header">
+      <div class="logo">
+        <a><img src="img/logo.svg" alt="логотип" width="" height=""></a>
+      </div>
+      <button class="header__menu-opener" type="button"></button>
+      <ul class="header__menu">
+        <li class="header__item">
+          <a class="header__link" href="catalog.html">Каталог товаров</a>
+        </li>
+        <li class="header__item">
+          <a class="header__link" href="catalog.html">Вязание на заказ</a>
+        </li>
+        <li class="header__item">
+          <input type="search" name="search" id="search">
+          <label for="search">Поиск по сайту</label>
+        </li>
+        <li class="header__item">
+          <a class="header__link" href="catalog.html">Корзина<span>: пока пуста</span></a>
+        </li>
+      </ul>
+    </div>
+  </header>
+  <main>
+    <section class="order">
+      <h1 class="order__title">Вязание на заказ</h1>
+      <p class="order__text">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы
+        свяжемся с вами, чтобы
+        уточнить детали.</p>
+      <form class="order_form">
+        <fieldset class="radio">
+          <legend class="radio__title">Тип</legend><!-- needs uppercase-->
+          <p><label class="radio__label"><input class="radio__toggle" type="radio" checked>Аксессуар для
+            интерьера</label></p>
+          <p><label class="radio__label"><input class="radio__toggle" type="radio">Детская игрушка</label></p>
+        </fieldset>
+        <fieldset class="checkbox">
+          <legend class="checkbox__title">Цвет</legend><!-- needs uppercase-->
+          <p><label class="checkbox__label"><input class="checkbox__toggle" type="checkbox" checked>Белый</label></p>
+          <p><label class="checkbox__label"><input class="checkbox__toggle" type="checkbox" checked>Серый</label></p>
+          <p><label class="checkbox__label"><input class="checkbox__toggle" type="checkbox">«Тиффани»</label></p>
+          <p><label class="checkbox__label"><input class="checkbox__toggle" type="checkbox">Черный</label></p>
+          <p><label class="checkbox__label"><input class="checkbox__toggle" type="checkbox">Розовый</label></p>
+          <p><label class="checkbox__label"><input class="checkbox__toggle" type="checkbox">Оранжевый</label></p>
+        </fieldset>
+        <fieldset class="user-data">
+          <legend class="">ФИО</legend><!-- needs uppercase-->
+          <p><label class="user-data__label">Имя:<input class="user-data__field" type="text"
+                                                         placeholder="Введите ваше имя*" required></label></p>
+          <p><label class="user-data__label">Фамилия:<input class="user-data__field" type="text" placeholder="Укажите фамилию*" required></label></p>
+          <p><label class="user-data__label">Отчество:<input class="user-data__field" type="text" placeholder="Отчество, если желаете"></label></p>
+          <p><label class="user-data__label">тел<input class="user-data__field" type="text" placeholder="+7 ХХХ ХХХ ХХ ХХ*" required></label></p><!-- needs uppercase-->
+          <p><label class="user-data__label">E-mail<input class="user-data__field" type="text" placeholder="Ваш Email*" required></label></p><!-- needs uppercase-->
+          <p><label class="user-data__label">Доп<textarea class="user-data__area" placeholder="Опишите все ваши
+пожелания к заказу"></textarea></label></p><!-- needs uppercase-->
+          <p>*Поля обязательны для заполнения</p>
+        </fieldset>
+        <button class="order__button button" type="submit">Отправить заказ</button><!-- needs uppercase-->
+      </form>
+    </section>
+
+  </main>
+  <footer>
+    <ul class="social-icon">
+      <li class="social-icon__item">
+        <a href=""><img src="" alt="мы в инстаграмм"></a>
+      </li>
+      <li class="social-icon__item">
+        <a href=""><img src="" alt="мы на фейсбуке"></a>
+      </li>
+      <li class="social-icon__item">
+        <a href=""><img src="" alt="мы в твиттере"></a>
+      </li>
+    </ul>
+    <div class="copyright">
+      <p class="copyright__text">Разработано</p>
+      <a class="copyright__logo" href="https://htmlacademy.ru/intensive/adaptive"><img src="" alt="логотип HTML-Academy"></a>
+    </div>
+  </footer>
+</div>
+</body>
+</html>
