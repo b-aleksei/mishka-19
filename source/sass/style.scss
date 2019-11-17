@@ -1,1 +1,6 @@
-@import "block1";
+@charset "utf-8";
+@import "base/normalize";
+@import "abstracts/variables";
+@import "abstracts/mixins";
+@import "abstracts/global";
+@import "pages/index/header";

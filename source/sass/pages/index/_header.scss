@@ -1,0 +1,53 @@
+.header {
+  position: relative;
+}
+
+.logo {
+  width: 86px;
+  margin: auto;
+}
+
+.header__menu-opener {
+  position: absolute;
+  top: 4px;
+  right: 0;
+  padding: 15px 20px;
+}
+
+.header__button-icon {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 33px;
+  height: 2px;
+  background-color: #000000;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 0;
+    width: 33px;
+    height: 2px;
+    background-color: #000000;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 20px;
+    left: 0;
+    width: 33px;
+    height: 2px;
+    background-color: #000000;
+  }
+}
+
+.header__menu {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+

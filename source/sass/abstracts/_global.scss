@@ -1,0 +1,51 @@
+body {
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.blue {
+  outline: 1px solid blue;
+}
+
+.red {
+  outline: 1px solid red;
+}
+
+.green {
+  outline: 1px solid green;
+}
+
+.temp {
+  outline: 1px dotted red;
+}
+
+.temp > * {
+  background-color: rgba(0, 255, 0, 0.3);
+}
+
+.temp > * > * {
+  outline: 1px dotted blue;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.button {
+  @include button;
+}
+
+.container {
+  width: 320px;
+  padding: 23px 30px;
+  margin: auto;
+}
