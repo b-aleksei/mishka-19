@@ -2,3 +2,15 @@
   background-color: transparent;
   border: none;
 }
+
+@mixin resetList {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+@mixin linkReset {
+  display: block;
+  text-decoration: none;
+  color: #000000;
+}
