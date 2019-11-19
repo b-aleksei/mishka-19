@@ -1,8 +1,3 @@
-@mixin button {
-  background-color: transparent;
-  border: none;
-}
-
 @mixin resetList {
   padding: 0;
   margin: 0;
@@ -14,3 +9,16 @@
   text-decoration: none;
   color: #000000;
 }
+/* stylelint-disable */
+@mixin font($param...) {
+  font-size: (nth($param, 1) * 1px);
+
+  @if length($param) > 1 {
+    font-weight: nth($param, 2);
+  }
+
+  @if length($param) > 2 {
+    line-height: (nth($param, 3) * 1px);
+  }
+}
+/* stylelint-enable */

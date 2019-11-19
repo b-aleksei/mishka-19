@@ -1,8 +1,8 @@
 .header__menu {
   @include resetList;
-  display: none;
-  position: absolute;
-  top: 55px;
+  //display: none;
+  position: relative;
+  top: 14px;
   left: 0;
   background-color: #ffffff;
 }
@@ -23,16 +23,11 @@
   font-weight: 700;
 }
 
-.header__search-description {
+.header__search-description::before {
+  content: url("../../../img/icon-search.svg");
   position: absolute;
-  font-size: 0;
-
-  &::before {
-    content: url("../../../img/icon-search.svg");
-    position: absolute;
-    top: 31px;
-    left: 3px;
-  }
+  top: 31px;
+  left: 3px;
 }
 
 .header__search {

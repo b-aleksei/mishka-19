@@ -14,10 +14,10 @@
   padding: 15px 20px;
 }
 
-.header__button-icon {
+.header--closed .header__button-icon {
   display: inline-block;
   position: absolute;
-  top: 0;
+  top: 6px;
   right: 0;
   width: 20px;
   height: 2px;
@@ -26,8 +26,8 @@
   &::before {
     content: "";
     position: absolute;
-    top: 6px;
-    left: 0;
+    top: -6px;
+    right: 0;
     width: 20px;
     height: 2px;
     background-color: #000000;
@@ -36,10 +36,44 @@
   &::after {
     content: "";
     position: absolute;
-    top: 12px;
-    left: 0;
+    top: 6px;
+    right: 0;
     width: 20px;
     height: 2px;
     background-color: #000000;
+  }
+}
+
+.header--opened .header__button-icon {
+  display: inline-block;
+  position: absolute;
+  top: 6px;
+  right: 0;
+  width: 0;
+  height: 2px;
+  background-color: #000000;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -6px;
+    right: 0;
+    width: 27px;
+    height: 2px;
+    background-color: #000000;
+    transform: translateX(6px) rotate(45deg);
+    transform-origin: 19% 50%;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 6px;
+    right: 0;
+    width: 27px;
+    height: 2px;
+    background-color: #000000;
+    transform: translateX(6px) rotate(-45deg);
+    transform-origin: 19% 50%;
   }
 }

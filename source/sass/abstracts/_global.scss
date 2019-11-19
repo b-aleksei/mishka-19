@@ -1,4 +1,6 @@
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: inherit;
 }
 
@@ -49,7 +51,8 @@ body {
 }
 
 .button {
-  @include button;
+  background-color: transparent;
+  border: none;
 }
 
 .container {

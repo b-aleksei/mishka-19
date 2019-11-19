@@ -2,18 +2,8 @@
   text-align: center;
 }
 
-@mixin font($param...) {
-  font-size: nth($param, 1);
-  @if length($param) > 1 {
-    font-weight: nth($param, 2);
-  }
-  @if length($param) > 2 {
-    line-height: nth($param, 3);
-  }
-}
-
 .goods__title {
-  @include font(27px);
+  @include font(27, 700, 30);
 }
 
 .goods__group {
@@ -22,8 +12,23 @@
 
 .goods__link {
   @include linkReset;
-  font-size: 19px;
-  font-weight: 700;
+  @include font(19, 700);
 }
 
+%extreme {
+  color: blue;
+  font-weight: bold;
+  font-size: 2em;
+}
 
+$grid-width: 40px;
+$gutter-width: 10px;
+$n: 6;
+
+@function z() {
+  @return $n * $grid-width + ($n - 1) * $gutter-width;
+}
+
+#sidebar {
+  width: z();
+}
