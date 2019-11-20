@@ -15,20 +15,15 @@
   @include font(19, 700);
 }
 
-%extreme {
-  color: blue;
-  font-weight: bold;
-  font-size: 2em;
+
+@mixin inset-divider-offset($offset, $padding) {
+  $divider-offset: (2 * $padding) + $offset;
+  @debug "divider offset: #{$divider-offset}";
+
+  margin-left: $divider-offset;
+  width: calc(100% - #{$divider-offset});
 }
 
-$grid-width: 40px;
-$gutter-width: 10px;
-$n: 6;
-
-@function z() {
-  @return $n * $grid-width + ($n - 1) * $gutter-width;
-}
-
-#sidebar {
-  width: z();
+.example {
+@include inset-divider-offset(2, 7);
 }

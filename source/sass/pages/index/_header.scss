@@ -9,71 +9,10 @@
 
 .header__menu-opener {
   position: absolute;
-  top: 10px;
-  right: 0;
-  padding: 15px 20px;
-}
-
-.header--closed .header__button-icon {
-  display: inline-block;
-  position: absolute;
   top: 6px;
-  right: 0;
-  width: 20px;
-  height: 2px;
-  background-color: #000000;
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: -6px;
-    right: 0;
-    width: 20px;
-    height: 2px;
-    background-color: #000000;
-  }
-
-  &::after {
-    content: "";
-    position: absolute;
-    top: 6px;
-    right: 0;
-    width: 20px;
-    height: 2px;
-    background-color: #000000;
-  }
+  right: -1px;
+  padding: 11px 11px;
+  cursor: pointer;
 }
 
-.header--opened .header__button-icon {
-  display: inline-block;
-  position: absolute;
-  top: 6px;
-  right: 0;
-  width: 0;
-  height: 2px;
-  background-color: #000000;
 
-  &::before {
-    content: "";
-    position: absolute;
-    top: -6px;
-    right: 0;
-    width: 27px;
-    height: 2px;
-    background-color: #000000;
-    transform: translateX(6px) rotate(45deg);
-    transform-origin: 19% 50%;
-  }
-
-  &::after {
-    content: "";
-    position: absolute;
-    top: 6px;
-    right: 0;
-    width: 27px;
-    height: 2px;
-    background-color: #000000;
-    transform: translateX(6px) rotate(-45deg);
-    transform-origin: 19% 50%;
-  }
-}
