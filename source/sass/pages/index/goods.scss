@@ -14,21 +14,3 @@
   @include linkReset;
   @include font(19, 700);
 }
-
-%extreme {
-  color: blue;
-  font-weight: bold;
-  font-size: 2em;
-}
-
-$grid-width: 40px;
-$gutter-width: 10px;
-$n: 6;
-
-@function z() {
-  @return $n * $grid-width + ($n - 1) * $gutter-width;
-}
-
-#sidebar {
-  width: z();
-}
