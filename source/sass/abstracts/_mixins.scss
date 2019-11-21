@@ -4,11 +4,6 @@
   list-style: none;
 }
 
-@mixin linkReset {
-  display: block;
-  text-decoration: none;
-  color: #000000;
-}
 /* stylelint-disable */
 @mixin font($param...) {
   font-size: (nth($param, 1) * 1px);
@@ -22,3 +17,16 @@
   }
 }
 /* stylelint-enable */
+
+@mixin backgrondStrech($color, $padding: -30px) {
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: $padding;
+    left: $padding;
+    bottom: 0;
+    z-index: -1;
+    background-color: $color;
+  }
+}

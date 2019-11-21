@@ -5,6 +5,7 @@
   top: 14px;
   left: 0;
   background-color: #ffffff;
+  z-index: 2;
 }
 
 .header__item {
@@ -16,11 +17,12 @@
 }
 
 .header__link {
-  @include linkReset;
   margin: auto 0;
   padding-left: 46px;
   font-size: 17px;
   font-weight: 700;
+  text-decoration: none;
+  color: #000000;
 }
 
 .header__search-description::before {
