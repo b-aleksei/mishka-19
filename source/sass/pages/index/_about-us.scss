@@ -1,0 +1,58 @@
+.about-us {
+  margin-bottom: 60px;
+}
+
+.about-us__title {
+  @include font(25, 700, 30);
+  margin-bottom: 30px;
+}
+
+.about-us__advantages-list {
+  @include resetList;
+}
+
+.about-us__advantage {
+  @include font(17, 700, 20);
+
+  &::before {
+    content: "";
+    display: flex;
+    width: 50px;
+    height: 38px;
+    justify-content: center;
+    align-items: flex-end;
+    margin: 20px 0;
+  }
+}
+
+.about-us__advantage--eko::before {
+  content: url("../../../img/icon-feature-flower.svg");
+  margin-bottom: 16px;
+}
+
+.about-us__advantage--style::before {
+  content: url("../../../img/icon-feature-money.svg");
+  margin-bottom: 25px;
+}
+
+.about-us__advantage--like::before {
+  content: url("../../../img/icon-feature-heart.svg");
+  margin-top: 25px;
+}
+
+.about-us__advantage--hand-made::before {
+  content: url("../../../img/icon-feature-ball.svg");
+  margin: 29px 0 16px 0;
+  width: 45px;
+}
+
+.about-us__advantage--support::before {
+  content: url("../../../img/icon-feature-rocket.svg");
+  width: 55px;
+  margin: 18px 0 27px -4px;
+}
+
+.about-us__advantage--gift::before {
+  content: url("../../../img/icon-feature-gift.svg");
+  margin: 26px 0 19px -4px;
+}
