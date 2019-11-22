@@ -42,6 +42,11 @@
   &:hover {
     top: -5px;
   }
+
+  &:active .goods__link-name,
+  &:active::after {
+    opacity: 0.3;
+  }
 }
 
 .goods__link-name {
