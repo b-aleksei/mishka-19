@@ -1,0 +1,65 @@
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+  min-width: 320px;
+}
+
+.blue {
+  outline: 1px solid blue;
+}
+
+.red {
+  outline: 1px solid red;
+}
+
+.green {
+  outline: 1px solid green;
+}
+
+.temp {
+  background-color: rgba(0, 255, 0, 0.3);
+}
+
+.temp > * {
+  outline: 1px dotted red;
+}
+
+.temp > * > * {
+  outline: 1px dotted blue;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.button {
+  background-color: transparent;
+  border: none;
+}
+
+.container {
+  width: 320px;
+  padding: 23px 30px;
+  margin: auto;
+}

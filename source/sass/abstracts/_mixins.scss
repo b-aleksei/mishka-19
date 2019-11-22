@@ -1,0 +1,32 @@
+@mixin resetList {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+/* stylelint-disable */
+@mixin font($param...) {
+  font-size: (nth($param, 1) * 1px);
+
+  @if length($param) > 1 {
+    font-weight: nth($param, 2);
+  }
+
+  @if length($param) > 2 {
+    line-height: (nth($param, 3) * 1px);
+  }
+}
+/* stylelint-enable */
+
+@mixin backgrondStrech($color, $padding: -30px) {
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: $padding;
+    left: $padding;
+    bottom: 0;
+    z-index: -1;
+    background-color: $color;
+  }
+}
