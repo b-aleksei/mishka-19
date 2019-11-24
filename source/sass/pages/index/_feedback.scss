@@ -1,0 +1,25 @@
+.feedback__title {
+  @include font(25, 700, 30);
+  margin-bottom: 24px;
+}
+
+.feedback__text {
+  line-height: 30px;
+  margin-bottom: 26px;
+}
+
+.feedback__user {
+  @include font(17, 400, 30);
+
+  p {
+    @include font(17, 700, 24);
+    margin-bottom: 2px;
+  }
+}
+
+.feedback__button {
+  @include font(18, 700, 20);
+  text-decoration: none;
+  color: #000;
+  text-transform: uppercase;
+}
