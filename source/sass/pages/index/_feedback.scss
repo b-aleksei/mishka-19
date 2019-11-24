@@ -1,3 +1,19 @@
+.feedback {
+  position: relative;
+  padding-bottom: 52px;
+
+  &::after {
+    content: "";
+    background: url("../../../img/bg-zigzag-line-mini.svg") repeat-x;
+    position: absolute;
+    height: 6px;
+    bottom: 0;
+    left: -30px;
+    z-index: 5;
+    right: -30px;
+  }
+}
+
 .feedback__title {
   @include font(25, 700, 30);
   margin-bottom: 24px;
@@ -6,20 +22,53 @@
 .feedback__text {
   line-height: 30px;
   margin-bottom: 26px;
+  color: #444444;
 }
 
 .feedback__user {
   @include font(17, 400, 30);
+  color: #444444;
+  margin-bottom: 31px;
+  font-style: normal;
 
   p {
     @include font(17, 700, 24);
     margin-bottom: 2px;
+    color: #000000;
+  }
+}
+
+.feedback__nav {
+  display: flex;
+  margin-bottom: 37px;
+}
+
+.feedback__toggle {
+  width: 50%;
+  height: 52px;
+  background-color: transparent;
+  border: 1px solid #ececec;
+  cursor: pointer;
+
+  &::before {
+    content: url("../../../img/icon-left-arrow.svg");
+  }
+}
+
+.feedback__forward {
+  border-left: none;
+
+  &::before {
+    content: url("../../../img/icon-right-arrow.svg");
   }
 }
 
 .feedback__button {
+  display: block;
+  width: auto;
+  padding: 14px 20px;
+  text-align: center;
+
   @include font(18, 700, 20);
   text-decoration: none;
-  color: #000;
-  text-transform: uppercase;
 }

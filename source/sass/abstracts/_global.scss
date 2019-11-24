@@ -29,11 +29,11 @@ body {
 }
 
 .temp {
-  background-color: rgba(0, 255, 0, 0.3);
+  outline: 1px dotted red;
 }
 
 .temp > * {
-  outline: 1px dotted red;
+  background-color: rgba(0, 255, 0, 0.3);
 }
 
 .temp > * > * {

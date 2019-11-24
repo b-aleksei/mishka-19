@@ -14,7 +14,7 @@
       <div class="logo">
         <a><img src="img/logo-mobile.svg" alt="логотип" width="86" height="35"></a>
       </div>
-      <button class="header__menu-opener button" type="button">
+      <button class="header__menu-opener" type="button">
         <span class="header__button-icon"></span></button>
       <ul class="header__menu red">
         <li class="header__item">
@@ -107,31 +107,33 @@
         </footer>
       </div>
       <div class="feedback__nav">
-        <button class="feedback__backward" type="button"><span class="visually-hidden">Предыдущий отзыв</span></button>
-        <button class="feedback__forward" type="button"><span class="visually-hidden">Следующий отзыв</span></button>
+        <button class="feedback__toggle feedback__backward " type="button"><span class="visually-hidden">Предыдущий
+          отзыв</span></button>
+        <button class="feedback__toggle feedback__forward" type="button"><span class="visually-hidden">Следующий
+          отзыв</span></button>
       </div>
       <a class="feedback__button button" href="feedback.html">Написать</a> <!--needs uppercase-->
     </section>
     <section class="contacts">
       <h2 class="contacts__title">Контакты</h2>
-      <div class="contacts__wrapper">
-        <address class="contacts__info">
-          <table class="contacts__data">
-            <tr class="contacts__data-row">
-              <td class="contacts__data-cell">e-mail:</td>
-              <td class="contacts__data-cell">info@mimimishkashop.ru</td>
-            </tr>
-            <tr class="contacts__data-row">
-              <td class="contacts__data-cell">адрес:</td>
-              <td class="contacts__data-cell">г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101</td>
-            </tr>
-          </table>
-        </address>
-        <div class="contacts__map-wrapper">
-          <iframe class="contacts__map" src="" width="250"></iframe>
-        </div>
-        <a class="contacts__button button" href="form-feedback.html">Напишите нам</a> <!--needs uppercase-->
+      <address class="contacts__info">
+        <table class="contacts__data">
+          <tr class="contacts__row">
+            <td class="contacts__cell">e-mail:</td>
+            <td class="contacts__cell contacts__cell--value"><span class="contacts__email">info@mimimishkashop.ru</span></td>
+          </tr>
+          <tr class="contacts__row">
+            <td class="contacts__cell contacts__cell--address">адрес:</td>
+            <td class="contacts__cell contacts__cell--address contacts__cell--value">г. Санкт-Петербург,<br> ул. Большая Конюшенная,<br> д.
+              19/8,
+              офис 101</td>
+          </tr>
+        </table>
+      </address>
+      <div class="contacts__map-wrapper">
+        <iframe class="contacts__map" src="" width="250"></iframe>
       </div>
+      <a class="contacts__button button" href="form-feedback.html">Напишите нам</a> <!--needs uppercase-->
     </section>
   </main>
   <footer>

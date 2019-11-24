@@ -2,7 +2,6 @@
   position: relative;
   color: #444444;
   padding-bottom: 42px;
-  margin-bottom: 28px;
 
   &::after {
     content: "";
@@ -63,7 +62,7 @@
 }
 
 .product-info__button {
-  min-width: 259px;
+  width: 100%;
   margin-top: 10px;
   padding: 14px 20px;
   line-height: 20px;

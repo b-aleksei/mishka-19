@@ -1,0 +1,40 @@
+.contacts {
+  margin: 35px 0 10px 0;
+}
+
+.contacts__title {
+  @include font(18, 700, 30);
+  margin-bottom: 0;
+}
+
+.contacts__info {
+  //margin: 26px 0 0 0;
+  font-style: normal;
+}
+
+.contacts__data {
+  border-spacing: 0 25px;
+  line-height: 30px;
+  color: #444444;
+  width: 100%;
+  table-layout: fixed;
+}
+
+.contacts__cell {
+  padding: 0;
+  vertical-align: top;
+}
+
+.contacts__cell--value {
+  width: 70%;
+}
+
+.contacts__cell--address {
+  padding-top: 7px;
+}
+
+.contacts__email {
+  border-bottom: 1px solid #62d1ba;
+  padding-bottom: 5px;
+
+}
