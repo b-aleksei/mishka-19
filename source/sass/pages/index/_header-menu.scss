@@ -30,6 +30,7 @@
   position: absolute;
   top: 31px;
   left: 3px;
+  z-index: 3;
 }
 
 .header__search {
@@ -54,6 +55,7 @@
     position: absolute;
     top: 29px;
     left: 1px;
+    z-index: 3;
   }
 }
 

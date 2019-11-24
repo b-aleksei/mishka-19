@@ -16,6 +16,7 @@
 
 .goods__group {
   @include resetList;
+  margin-bottom: 29px;
 }
 
 .goods__link {
@@ -40,6 +41,11 @@
 
   &:hover {
     top: -5px;
+  }
+
+  &:active .goods__link-name,
+  &:active::after {
+    opacity: 0.3;
   }
 }
 
