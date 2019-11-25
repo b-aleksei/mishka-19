@@ -14,6 +14,7 @@ body {
   font-weight: 400;
   line-height: 24px;
   min-width: 320px;
+  overflow-x: hidden;
 }
 
 .blue {
@@ -29,11 +30,11 @@ body {
 }
 
 .temp {
-  outline: 1px dotted red;
+  background-color: rgba(0, 255, 0, 0.3);
 }
 
 .temp > * {
-  background-color: rgba(0, 255, 0, 0.3);
+  outline: 1px dotted red;
 }
 
 .temp > * > * {
@@ -66,11 +67,32 @@ body {
 .feedback,
 .contacts__wrapper,
 .main-footer {
-  padding: 0 calc((100% - #{$minWidth} + 60px) / 2);
+  //padding: 0 30px;
+  padding: 0 calc((100% - 320px + 60px) / 2)
 }
 
-/*.container {
-  max-width: 320px;
-  padding: 23px 30px;
-  margin: auto;
-}*/
+/*
+@media (min-width: $medium) {
+
+  .main-header,
+  .goods,
+  .about-us,
+  .feedback,
+  .contacts__wrapper,
+  .main-footer {
+    padding: 0 calc((100% - #{$medium} + 100px) / 2);
+  }
+}
+
+@media (min-width: $large) {
+  .main-header,
+  .goods,
+  .about-us,
+  .feedback,
+  .contacts__wrapper,
+  .main-footer {
+    padding: 0 calc((100% - #{$large} + 100px) / 2);
+  }
+}
+*/
+

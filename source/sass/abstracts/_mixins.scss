@@ -18,13 +18,13 @@
 }
 /* stylelint-enable */
 
-@mixin backgrondStrech($color, $padding: -30px) {
+@mixin backgrondStrech($color) {
   &::before {
     content: "";
     position: absolute;
     top: 0;
-    right: $padding;
-    left: $padding;
+    right: -50vw;
+    left: -50vw;
     bottom: 0;
     z-index: -1;
     background-color: $color;

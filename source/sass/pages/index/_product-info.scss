@@ -60,6 +60,12 @@
   width: 165px;
 }
 
+
+.product-info__picture {
+  width: 100%;
+  height: auto;
+}
+
 .product-info__wrap-center {
   @include font(17, 700);
   text-align: center;
