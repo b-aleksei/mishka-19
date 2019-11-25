@@ -1,5 +1,5 @@
 .contacts {
-  margin: 35px 0 10px 0;
+  margin: 35px 0 65px 0;
 }
 
 .contacts__title {
@@ -8,8 +8,8 @@
 }
 
 .contacts__info {
-  //margin: 26px 0 0 0;
   font-style: normal;
+  margin-bottom: 10px;
 }
 
 .contacts__data {
@@ -36,5 +36,20 @@
 .contacts__email {
   border-bottom: 1px solid #62d1ba;
   padding-bottom: 5px;
+}
 
+.contacts__map {
+  background: url("../../../img/map-mobile@1x.jpg") no-repeat 50%;
+  height: 457px;
+  margin-bottom: 40px;
+}
+
+.contacts__button {
+  display: block;
+  width: auto;
+  padding: 14px 20px;
+  text-align: center;
+
+  @include font(18, 700, 20);
+  text-decoration: none;
 }

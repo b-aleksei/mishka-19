@@ -1,7 +1,6 @@
-.product-info {
-  position: relative;
-  color: #444444;
+.goods {
   padding-bottom: 42px;
+  position: relative;
 
   &::after {
     content: "";
@@ -9,10 +8,15 @@
     position: absolute;
     height: 6px;
     bottom: 0;
-    left: -30px;
+    left: 0;
     z-index: 5;
-    right: -30px;
+    right: 0;
   }
+}
+
+.product-info {
+  position: relative;
+  color: #444444;
 }
 
 .product-info__title {
