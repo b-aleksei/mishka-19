@@ -1,10 +1,10 @@
 .feedback {
   position: relative;
-  padding-bottom: 52px;
+  padding-bottom: 50px;
 
   &::after {
     content: "";
-    background: url("../../../img/bg-zigzag-line-mini.svg") repeat-x;
+    background: url("../img/bg-zigzag-line-mini.svg") repeat-x;
     position: absolute;
     height: 6px;
     bottom: 0;
@@ -21,21 +21,27 @@
 
 .feedback__text {
   line-height: 30px;
-  margin-bottom: 26px;
-  color: #444444;
+  margin-bottom: 27px;
+  color: $lightBlack;
+}
+
+.feedback__contacts {
+  margin: 0;
 }
 
 .feedback__user {
-  @include font(17, 400, 30);
-  color: #444444;
-  margin-bottom: 31px;
-  font-style: normal;
+  @include font(17, 700, 24);
+  display: block;
+  color: $black;
+  margin-bottom: 2px;
+  text-decoration: none;
+}
 
-  p {
-    @include font(17, 700, 24);
-    margin-bottom: 2px;
-    color: #000000;
-  }
+.feedback__user--address {
+  margin-bottom: 31px;
+  color: $lightBlack;
+  font-weight: 400;
+  line-height: 30px;
 }
 
 .feedback__nav {
@@ -51,15 +57,16 @@
   cursor: pointer;
 
   &::before {
-    content: url("../../../img/icon-left-arrow.svg");
+    content: url("../img/icon-left-arrow.svg");
+    display: block;
   }
 }
 
-.feedback__forward {
+.feedback__toggle--forward {
   border-left: none;
 
   &::before {
-    content: url("../../../img/icon-right-arrow.svg");
+    transform: rotate(180deg) translateY(3px);
   }
 }
 

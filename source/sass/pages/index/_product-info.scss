@@ -4,7 +4,7 @@
 
   &::after {
     content: "";
-    background: url("../../../img/bg-zigzag-line-mini.svg") repeat-x;
+    background: url("../img/bg-zigzag-line-mini.svg") repeat-x;
     position: absolute;
     height: 6px;
     bottom: 0;
@@ -16,13 +16,13 @@
 
 .product-info {
   position: relative;
-  color: #444444;
+  color: $lightBlack;
 }
 
 .product-info__title {
   @include font(25, 700, 30);
   margin: 0 0 3px 2px;
-  color: #000000;
+  color: $black;
 }
 
 .product-info__hit {

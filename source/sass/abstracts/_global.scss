@@ -56,39 +56,26 @@ body {
 
 .button {
   background-color: transparent;
-  border: 2px solid #444444;
-  color: #444444;
+  border: 2px solid $lightBlack;
+  color: $lightBlack;
   text-transform: uppercase;
 }
 
-.main-header,
-.goods,
-.about-us,
-.feedback,
-.contacts__wrapper,
-.main-footer {
+.container {
   //padding: 0 30px;
-  padding: 0 calc((100% - 320px + 60px) / 2)
+  padding: 0 calc((100% - 320px + 60px) / 2);
 }
 
+/*
 @media (min-width: $medium) {
-  .main-header,
-  .goods,
-  .about-us,
-  .feedback,
-  .contacts__wrapper,
-  .main-footer {
+  .container {
     padding: 0 calc((100% - #{$medium} + 100px) / 2);
   }
 }
 
 @media (min-width: $large) {
-  .main-header,
-  .goods,
-  .about-us,
-  .feedback,
-  .contacts__wrapper,
-  .main-footer {
+  .container {
     padding: 0 calc((100% - #{$large} + 100px) / 2);
   }
 }
+*/
