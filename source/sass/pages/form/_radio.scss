@@ -1,0 +1,24 @@
+.radio {
+  border: none;
+  padding: 0;
+}
+
+.color-green {
+  display: block;
+  position: relative;
+  width: 100%;
+
+  @include font(17, 700, 16);
+  text-transform: uppercase;
+  color: $lightGreen;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 60px;
+    right: 0;
+    height: 1px;
+    background-color: $lightGreen;
+  }
+}

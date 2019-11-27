@@ -29,7 +29,7 @@
   color: #ffffff;
   text-decoration: none;
 
-  @include backgrondStrech(#63d1bb);
+  @include backgrondStrech($lightGreen);
 
   &:hover::before {
     bottom: -5px;

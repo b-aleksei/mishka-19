@@ -28,7 +28,7 @@
 .product-info__hit {
   @include font(17, 700, 20);
   text-transform: uppercase;
-  color: #63d1bb;
+  color: $lightGreen;
   margin-left: 1px;
 }
 
@@ -72,9 +72,12 @@
 }
 
 .product-info__button {
-  width: 100%;
-  margin-top: 10px;
+  display: block;
+  width: auto;
+  margin-top: 27px;
   padding: 14px 20px;
   line-height: 20px;
   font-weight: inherit;
+  text-align: center;
+  text-decoration: none;
 }
