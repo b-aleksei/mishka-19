@@ -15,7 +15,7 @@
   flex-direction: column;
   width: 320px;
   height: 79px;
-  border-top: 1px solid #ececec;
+  border-top: 1px solid $borderGray;
 }
 
 .header__link {
@@ -51,7 +51,7 @@
 
 .header__link--basket {
   height: 78px;
-  border-bottom: 1px solid #ececec;
+  border-bottom: 1px solid $borderGray;
 
   &::before {
     content: url("../img/icon-cart.svg");
