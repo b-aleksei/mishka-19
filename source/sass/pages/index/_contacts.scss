@@ -1,5 +1,5 @@
 .contacts {
-  margin: 35px 0 65px 0;
+  margin: 36px 0 40px 0;
 }
 
 .contacts__title {
@@ -15,7 +15,7 @@
 .contacts__data {
   border-spacing: 0 25px;
   line-height: 30px;
-  color: #444444;
+  color: $lightBlack;
   width: 100%;
   table-layout: fixed;
 }
@@ -39,7 +39,7 @@
 }
 
 .contacts__map {
-  background: url("../../../img/map-mobile@1x.jpg") no-repeat 50%;
+  background: url("../img/map-mobile@1x.jpg") no-repeat 50%;
   height: 457px;
   margin-bottom: 40px;
 

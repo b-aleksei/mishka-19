@@ -1,0 +1,8 @@
+.catalog-goods__title {
+  position: relative;
+  padding: 69px 0 78px 11px;
+  margin: 0;
+
+  @include font(27, 700, 30);
+  @include backgrondStrech(#f1f1f1);
+}
