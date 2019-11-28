@@ -1,0 +1,96 @@
+.user-data {
+  @include resetFieldset;
+  //margin-bottom: 10px;
+}
+
+.user-data__title {
+  margin-bottom: 12px;
+}
+
+.user-data__label {
+  display: block;
+
+}
+
+.user-data__field {
+  width: 100%;
+  margin: 3px 0;
+  padding: 14px 0 16px 0;
+  border: none;
+  border-bottom: 2px solid #000000;
+  font-weight: 400;
+  line-height: 18px;
+
+  &::placeholder {
+    opacity: 0.3;
+  }
+}
+
+.user-data__contact {
+  position: relative;
+  margin-top: 29px;
+
+  &::before {
+    top: 8px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 19px;
+    right: 7px;
+    opacity: 0.2;
+  }
+}
+
+.user-data__contact--phone::after {
+  content: url("../img/icon-phone.svg");
+}
+
+.user-data__contact--email {
+  &::before {
+    left: 80px;
+  }
+
+  &::after {
+    content: url("../img/icon-mail.svg");
+    bottom: 11px;
+    right: 3px;
+  }
+}
+
+.user-data__field--phone {
+  font-size: 19px;
+  margin-top: 9px;
+  padding-right: 40px;
+}
+
+.user-data__field--email {
+  margin-top: 9px;
+  padding-right: 40px;
+}
+
+.user-data__area {
+  width: 260px;
+  height: 142px;
+  margin-top: 25px;
+  padding: 13px 15px;
+  border: 2px solid $lightBlack;
+  font-weight: 400;
+  line-height: 18px;
+}
+
+small {
+  @include font(14, 400, 16);
+  color: $lightBlack;
+}
+
+.order__button {
+  display: block;
+  width: auto;
+  margin-top: 29px;
+  padding: 15px 20px;
+  text-align: center;
+  font-weight: 700;
+  line-height: 16px;
+}

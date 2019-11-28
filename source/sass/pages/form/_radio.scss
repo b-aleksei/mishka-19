@@ -1,24 +1,31 @@
 .radio {
-  border: none;
-  padding: 0;
+  @include resetFieldset;
+  margin-bottom: 14px;
 }
 
-.color-green {
-  display: block;
-  position: relative;
-  width: 100%;
+.radio__title {
+  margin-bottom: 10px;
+}
 
-  @include font(17, 700, 16);
-  text-transform: uppercase;
-  color: $lightGreen;
+.radio__label {
+  position: relative;
+  display: block;
+  padding: 7px 0 0 65px;
+  min-height: 38px;
 
   &::before {
     content: "";
     position: absolute;
-    top: 50%;
-    left: 60px;
-    right: 0;
-    height: 1px;
-    background-color: $lightGreen;
+    top: 0;
+    left: 2px;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    border: 2px solid $lightBlack;
   }
+}
+
+.radio__toggle:checked + label::before {
+  background-color: $lightGreen;
+  box-shadow: inset 0 0 0 9px #ffffff;
 }
