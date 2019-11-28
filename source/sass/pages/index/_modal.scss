@@ -1,0 +1,72 @@
+.modal-container {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.9;
+  background-color: white;
+}
+
+.modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 320px;
+  height: 336px;
+  box-shadow: 0 5px 10px rgba(0, 1, 1, 0.25);
+  border: 1px solid #c6c6c6;
+  text-align: center;
+}
+
+.modal__title {
+  padding: 29px 78px 0 78px;
+  margin: 0;
+
+  @include font(25, 700, 30);
+  text-transform: uppercase;
+}
+
+.modal__text {
+  color: $lightBlack;
+  margin-bottom: 26px;
+}
+
+.modal__list {
+  display: flex;
+  justify-content: center;
+  //margin-bottom: 100px;
+
+  @include resetList;
+
+  li:not(:last-child) {
+    margin-right: 6px;
+  }
+}
+
+.modal__label {
+  display: block;
+  width: 82px;
+  height: 52px;
+  border: 2px solid $lightGreen;
+
+  @include font(17, 700, 47);
+  color: $lightBlack;
+
+}
+
+.modal_add-to-cart {
+  width: 260px;
+  height: 52px;
+  margin-top: 31px;
+  background-color: $lightGreen;
+  border: none;
+  text-transform: uppercase;
+
+  @include font(17, 700, 16);
+  color: #ffffff;
+}
