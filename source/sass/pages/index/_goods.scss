@@ -7,11 +7,11 @@
 
   @include font(27, 700, 30);
   margin: 0;
-  padding-top: 70px;
+  padding-top: 71px;
   padding-bottom: 123px;
-  background: #fbfbfb url("../../../img/hero-mobile@1x.jpg") 49% 20% no-repeat;
+  background: #f9f9f9 url("../img/hero-mobile@1x.jpg") 50% 18% no-repeat;
 
-  @include backgrondStrech(#fbfbfb);
+  @include backgrondStrech(#f9f9f9);
 }
 
 .goods__group {
@@ -29,7 +29,7 @@
   color: #ffffff;
   text-decoration: none;
 
-  @include backgrondStrech(#63d1bb);
+  @include backgrondStrech($lightGreen);
 
   &:hover::before {
     bottom: -5px;
@@ -57,7 +57,7 @@
 
 .goods__link--interior {
   &::after {
-    content: url("../../../img/icon-interior.svg");
+    content: url("../img/icon-interior.svg");
     position: absolute;
     top: 23px;
     right: 4px;
@@ -71,7 +71,7 @@
   }
 
   &::after {
-    content: url("../../../img/icon-toy.svg");
+    content: url("../img/icon-toy.svg");
     position: absolute;
     top: 22px;
     right: -4px;

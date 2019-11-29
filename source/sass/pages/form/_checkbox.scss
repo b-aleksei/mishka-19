@@ -1,0 +1,31 @@
+.checkbox {
+  @include resetFieldset;
+  margin-bottom: 9px;
+}
+
+.checkbox__title {
+  margin-bottom: 9px;
+}
+
+.checkbox__label {
+  position: relative;
+  display: block;
+  height: 40px;
+  padding-left: 64px;
+  line-height: 40px;
+  margin-bottom: 21px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 40px;
+    border: 2px solid $lightBlack;
+  }
+}
+
+.checkbox__toggle:checked + label::before {
+  content: url("../img/icon-tick.svg");
+}

@@ -4,6 +4,12 @@
   list-style: none;
 }
 
+@mixin resetFieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
 /* stylelint-disable */
 @mixin font($param...) {
   font-size: (nth($param, 1) * 1px);
@@ -18,13 +24,13 @@
 }
 /* stylelint-enable */
 
-@mixin backgrondStrech($color, $padding: -30px) {
+@mixin backgrondStrech($color) {
   &::before {
     content: "";
     position: absolute;
     top: 0;
-    right: $padding;
-    left: $padding;
+    right: -50vw;
+    left: -50vw;
     bottom: 0;
     z-index: -1;
     background-color: $color;

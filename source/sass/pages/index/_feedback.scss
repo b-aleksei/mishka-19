@@ -1,1 +1,81 @@
-//comment
+.feedback {
+  position: relative;
+  padding-bottom: 50px;
+
+  &::after {
+    content: "";
+    background: url("../img/bg-zigzag-line-mini.svg") repeat-x;
+    position: absolute;
+    height: 6px;
+    bottom: 0;
+    left: -30px;
+    z-index: 5;
+    right: -30px;
+  }
+}
+
+.feedback__title {
+  @include font(25, 700, 30);
+  margin-bottom: 24px;
+}
+
+.feedback__text {
+  line-height: 30px;
+  margin-bottom: 27px;
+  color: $lightBlack;
+}
+
+.feedback__contacts {
+  margin: 0;
+}
+
+.feedback__user {
+  @include font(17, 700);
+  display: block;
+  color: $black;
+  margin-bottom: 2px;
+  text-decoration: none;
+}
+
+.feedback__user--address {
+  margin-bottom: 31px;
+  color: $lightBlack;
+  font-weight: 400;
+  line-height: 30px;
+}
+
+.feedback__nav {
+  display: flex;
+  margin-bottom: 37px;
+}
+
+.feedback__toggle {
+  width: 50%;
+  height: 52px;
+  background-color: transparent;
+  border: 1px solid $borderGray;
+  cursor: pointer;
+
+  &::before {
+    content: url("../img/icon-left-arrow.svg");
+    display: block;
+  }
+}
+
+.feedback__toggle--forward {
+  border-left: none;
+
+  &::before {
+    transform: rotate(180deg) translateY(3px);
+  }
+}
+
+.feedback__button {
+  display: block;
+  width: auto;
+  padding: 14px 20px;
+  text-align: center;
+
+  @include font(18, 700, 20);
+  text-decoration: none;
+}
