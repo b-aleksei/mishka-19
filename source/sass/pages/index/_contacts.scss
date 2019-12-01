@@ -54,7 +54,24 @@
   width: auto;
   padding: 14px 20px;
   text-align: center;
+  margin: 0 auto;
 
   @include font(18, 700, 20);
   text-decoration: none;
+}
+
+@media (min-width: 768px) {
+  .contacts__data tbody {
+    display: flex;
+  }
+
+  .contacts__row {
+    width: 50%;
+
+  }
+
+  .contacts__button {
+    width: 230px;
+  }
+
 }
