@@ -25,6 +25,42 @@
   }
 }
 
+@media (min-width: $medium) {
+  .about-us__advantages-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .about-us__advantage {
+    width: 50%;
+  }
+
+  .about-us__advantage--eko {
+    order: -1;
+  }
+
+  .about-us__advantage--hand-made {
+    order: 1;
+  }
+
+  .about-us__advantage--style {
+    order: 2;
+  }
+
+  .about-us__advantage--support {
+    order: 3;
+  }
+
+  .about-us__advantage--like {
+    order: 4;
+  }
+
+  .about-us__advantage--gift {
+    order: 5;
+  }
+
+}
+
 .about-us__advantage--eko::before {
   content: url("../img/icon-feature-flower.svg");
   margin-bottom: 16px;

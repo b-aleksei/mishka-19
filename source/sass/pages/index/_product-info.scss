@@ -1,25 +1,3 @@
-.goods {
-  padding-bottom: 42px;
-  position: relative;
-
-  &::after {
-    content: "";
-    background: url("../img/bg-zigzag-line-mini2.svg");
-    position: absolute;
-    height: 6px;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 5;
-
-    @media (min-width: $medium) {
-      left: 50px;
-      right: 50px;
-      height: 17px;
-    }
-  }
-}
-
 .product-info {
   position: relative;
   color: $lightBlack;
@@ -36,6 +14,13 @@
   text-transform: uppercase;
   color: $lightGreen;
   margin-left: 1px;
+
+  @media (min-width: $medium) {
+    float: right;
+    width: 70px;
+    text-align: center;
+    margin: -35px 0 0 0;
+  }
 }
 
 .product-info__descriptions {
@@ -44,6 +29,10 @@
 
 .product-info__feature {
   margin: 0;
+
+  @media (min-width: $medium) {
+    display: flex;
+  }
 }
 
 .product-info__table {

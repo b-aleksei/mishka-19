@@ -1,3 +1,25 @@
+.goods {
+  padding-bottom: 42px;
+  position: relative;
+
+  &::after {
+    content: "";
+    background: url("../img/bg-zigzag-line-mini2.svg");
+    position: absolute;
+    height: 6px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 5;
+
+    @media (min-width: $medium) {
+      left: 50px;
+      right: 50px;
+      height: 17px;
+    }
+  }
+}
+
 .goods__title-wrapper {
   text-align: center;
 }
