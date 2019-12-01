@@ -17,6 +17,17 @@
 .goods__group {
   @include resetList;
   margin-bottom: 29px;
+
+  @media (min-width: $medium) {
+    display: flex;
+  }
+}
+
+.goods__group-item {
+  @media (min-width: 768px) {
+    //width: 50%;
+    flex-grow: 1;
+  }
 }
 
 .goods__link {
@@ -30,6 +41,13 @@
   text-decoration: none;
 
   @include backgrondStrech($lightGreen);
+
+  @media (min-width: $medium) {
+    &::before {
+      left: 0;
+      right: 0;
+    }
+  }
 
   &:hover::before {
     bottom: -5px;

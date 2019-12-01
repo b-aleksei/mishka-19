@@ -85,7 +85,7 @@ body {
   padding: 0 calc((100% - 320px + 60px) / 2);
 }
 
-/*@media (min-width: $medium) {
+@media (min-width: $medium) {
   .container {
     //padding: 0 50px;
     padding: 0 calc((100% - #{$medium} + 100px) / 2);
@@ -97,4 +97,4 @@ body {
     //padding: 0 50px;
     padding: 0 calc((100% - #{$large} + 100px) / 2);
   }
-}*/
+}
