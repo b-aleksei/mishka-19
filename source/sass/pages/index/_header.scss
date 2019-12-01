@@ -18,3 +18,14 @@
   background-color: transparent;
   border: none;
 }
+
+@media (min-width: $medium) {
+  .logo {
+    margin: 0;
+    float: left;
+  }
+
+  .header__menu-opener {
+    display: none;
+  }
+}

@@ -60,7 +60,7 @@
   text-decoration: none;
 }
 
-@media (min-width: 768px) {
+@media (min-width: $medium) {
   .contacts__data tbody {
     display: flex;
   }

@@ -39,7 +39,7 @@
   display: none;
 }
 
-@media (min-width: 768px) {
+@media (min-width: $medium) {
   .main-footer {
     display: flex;
     justify-content: space-between;

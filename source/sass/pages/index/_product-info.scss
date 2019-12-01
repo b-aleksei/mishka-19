@@ -14,25 +14,15 @@
   text-transform: uppercase;
   color: $lightGreen;
   margin-left: 1px;
-
-  @media (min-width: $medium) {
-    float: right;
-    width: 70px;
-    text-align: center;
-    margin: -35px 0 0 0;
-  }
 }
 
 .product-info__descriptions {
-  margin: 21px 0 16px 2px;
+  margin: 0 0 16px 2px;
 }
 
 .product-info__feature {
-  margin: 0;
-
-  @media (min-width: $medium) {
-    display: flex;
-  }
+  position: relative;
+  margin: 21px 0 0 0;
 }
 
 .product-info__table {
@@ -75,4 +65,25 @@
   font-weight: inherit;
   text-align: center;
   text-decoration: none;
+}
+
+@media (min-width: $medium) {
+  .product-info__hit {
+    float: right;
+    width: 70px;
+    text-align: center;
+    margin: -35px 0 0 0;
+  }
+
+  .product-info__picture {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  .product-info__picture,
+  .product-info__options,
+  .product-info__wrap-center {
+    width: 50%;
+  }
 }

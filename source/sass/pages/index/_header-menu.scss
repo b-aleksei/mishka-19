@@ -3,7 +3,6 @@
   display: none;
   position: relative;
   top: 15px;
-  //left: -30px;
   left: calc(50% - 160px);
   background-color: #ffffff;
   z-index: 2;
@@ -119,5 +118,45 @@
 
   &::after {
     transform: rotate(45deg);
+  }
+}
+
+@media (min-width: $medium) {
+  .header__menu {
+    display: flex;
+    flex-wrap: wrap;
+    position: static;
+  }
+
+  .header__item {
+    width: auto;
+  }
+
+  .header__link--catalog,
+  .header__link--knitting {
+    padding-left: 0;
+  }
+
+  .header__link,
+  .header__search {
+    margin: 0;
+  }
+
+  .header__item--search {
+    order: -2;
+    margin-left: 30%;
+  }
+
+  .header__item--basket {
+    order: -1;
+  }
+
+  .header__search {
+    width: 83px;
+    padding: 0;
+
+    &::placeholder {
+      font-size: 0;
+    }
   }
 }
