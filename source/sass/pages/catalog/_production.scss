@@ -50,3 +50,14 @@
   @include font(17, 700, 16);
   text-decoration: none;
 }
+
+@media (min-width: $medium) {
+  .production {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .production__wrap {
+    order: -1;
+  }
+}

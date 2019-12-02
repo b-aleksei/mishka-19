@@ -5,6 +5,7 @@
 .catalog-goods__item {
   border: 1px solid $borderGray;
   margin: 30px 0 0 0;
+  padding: 0;
 }
 
 .catalog-goods__title {
@@ -25,16 +26,16 @@
   margin: 0;
 }
 
-.catalog-goods__picture-wrap {
+.catalog-goods__picture {
+  display: block;
+  width: 100%;
+  height: auto;
   margin: 0 auto 20px auto;
 }
 
-.catalog-goods__picture {
-  width: 100%;
-  height: auto;
-}
-
 .catalog-goods__link {
+  display: block;
+
   @include font(17, 700);
   color: $black;
   text-decoration: none;
@@ -70,5 +71,22 @@
 
   &::before {
     content: url("../img/icon-cart.svg");
+  }
+}
+
+@media (min-width: $medium) {
+  .catalog-goods__picture {
+    float: left;
+    width: 334px;
+  }
+
+  .catalog-goods__wrapper-price {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .catalog-goods__feature {
+    min-height: 210px;
   }
 }
