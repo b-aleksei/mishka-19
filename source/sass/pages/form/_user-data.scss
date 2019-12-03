@@ -1,6 +1,5 @@
 .user-data {
   @include resetFieldset;
-  //margin-bottom: 10px;
 }
 
 .user-data__title {
@@ -9,7 +8,6 @@
 
 .user-data__label {
   display: block;
-
 }
 
 .user-data__field {
@@ -96,4 +94,63 @@ small {
   text-align: center;
   font-weight: 700;
   line-height: 16px;
+}
+
+@media (min-width: $medium) {
+  .radio,
+  .checkbox,
+  .user-data {
+    p {
+      margin-left: 100px;
+    }
+  }
+
+  .checkbox {
+    display: flex;
+    flex-wrap: wrap;
+    width: 710px;
+
+    p {
+      min-width: 170px;
+    }
+  }
+
+  .radio__title,
+  .checkbox__title,
+  .user-data__title {
+    float: left;
+    top: 20px;
+  }
+
+  .user-data__contact--phone,
+  .user-data__contact--email,
+  .user-data__contact--comment {
+    //float: left;
+    top: 50px;
+    left: -100px;
+  }
+
+  .color-green {
+    &::before {
+      background-color: transparent;
+    }
+  }
+
+  .user-data__area {
+    width: 100%;
+  }
+
+  .order__wrap-submit {
+    display: flex;
+    justify-content: space-between;
+
+    small {
+      margin-top: 50px;
+    }
+  }
+
+  .order__button {
+    width: 230px;
+    order: -1;
+  }
 }

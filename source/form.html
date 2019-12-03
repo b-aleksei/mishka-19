@@ -56,9 +56,11 @@
           class="checkbox__label" for="gray">Серый</label></p>
         <p><input class="checkbox__toggle visually-hidden" id="tiffany" type="checkbox" name="tiffany"><label
           class="checkbox__label" for="tiffany">«Тиффани»</label></p>
-        <p><input class="checkbox__toggle visually-hidden" id="black" type="checkbox" name="black"><label class="checkbox__label"
+        <p><input class="checkbox__toggle visually-hidden" id="black" type="checkbox" name="black"><label
+          class="checkbox__label"
           for="black">Черный</label></p>
-        <p><input class="checkbox__toggle visually-hidden" id="pink" type="checkbox" name="pink"><label class="checkbox__label"
+        <p><input class="checkbox__toggle visually-hidden" id="pink" type="checkbox" name="pink"><label
+          class="checkbox__label"
           for="pink">Розовый</label></p>
         <p><input class="checkbox__toggle visually-hidden" id="orange" type="checkbox" name="orange"><label
           class="checkbox__label" for="orange">Оранжевый
@@ -72,21 +74,22 @@
           placeholder="Укажите фамилию*" required></label></p>
         <p><label>Отчество:<input class="user-data__field" type="text" name="middle-name"
           placeholder="Отчество, если желаете"></label></p>
-        <p><label class="user-data__contact user-data__contact--phone color-green">тел<input
-          class="user-data__field user-data__field--phone"
+        <p><label class="user-data__contact user-data__contact--phone color-green" for="phone">тел</label><input
+          class="user-data__field user-data__field--phone" id="phone"
           type="text" name="phone"
-          placeholder="+7 ХХХ ХХХ ХХ ХХ*" required></label></p>
-        <p><label class="user-data__contact user-data__contact--email color-green">E-mail<input
-          class="user-data__field user-data__field--email"
+          placeholder="+7 ХХХ ХХХ ХХ ХХ*" required></p>
+        <p><label class="user-data__contact user-data__contact--email color-green" for="email">E-mail</label><input
+          class="user-data__field user-data__field--email" id="email"
           type="text" name="email"
-          placeholder="Ваш Email*" required></label></p>
+          placeholder="Ваш Email*" required></p>
         <p class="user-data__margin-bottom"><label
-          class="user-data__contact user-data__contact--comment color-green">Доп<textarea
-          class="user-data__area" name="comment"
-          placeholder="Опишите все ваши пожелания к заказу"></textarea></label></p>
+          class="user-data__contact user-data__contact--comment color-green" for="comment">Доп</label><textarea
+          class="user-data__area" id="comment" name="comment"
+          placeholder="Опишите все ваши пожелания к заказу"></textarea></p>
       </fieldset>
-        <small>*Поля обязательны для заполнения</small>
-      <button class="order__button button" type="submit">Отправить заказ</button>
+      <div class="order__wrap-submit"><small>*Поля обязательны для заполнения</small>
+        <button class="order__button button" type="submit">Отправить заказ</button>
+      </div>
     </form>
   </section>
 </main>
