@@ -61,3 +61,19 @@
     order: -1;
   }
 }
+
+@media (min-width: $large) {
+  .production {
+    position: relative;
+    padding-left: 60%;
+  }
+
+  .production__wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60%;
+    padding-top: 33.75%;
+  }
+
+}

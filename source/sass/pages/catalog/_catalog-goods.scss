@@ -90,3 +90,23 @@
     min-height: 210px;
   }
 }
+
+@media (min-width: $large) {
+  .catalog-goods__list {
+    display: flex;
+  }
+
+  .catalog-goods__picture {
+    float: none;
+    width: 316px;
+  }
+
+  .catalog-goods__wrapper-price {
+    display: block;
+  }
+
+  .catalog-goods__feature {
+    min-height: 20px;
+  }
+}
+
