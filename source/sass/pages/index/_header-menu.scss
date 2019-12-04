@@ -160,3 +160,17 @@
     }
   }
 }
+
+@media (min-width: $large) {
+  .header__item--search,
+  .header__item--basket {
+    order: 0;
+  }
+
+  .logo {
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    margin-left: -43px;
+  }
+}

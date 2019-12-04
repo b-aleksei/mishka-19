@@ -73,3 +73,9 @@
     width: 230px;
   }
 }
+
+@media (min-width: $large) {
+  .contacts__wrapper {
+    margin-left: 100px;
+  }
+}

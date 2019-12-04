@@ -91,3 +91,9 @@
   content: url("../img/icon-feature-gift.svg");
   margin: 26px 0 19px -4px;
 }
+
+@media (min-width: $large) {
+  .feedback {
+    margin-left: 100px;
+  }
+}

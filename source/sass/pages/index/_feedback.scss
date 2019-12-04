@@ -101,3 +101,9 @@
     order: -2;
   }
 }
+
+@media (min-width: $large) {
+  .about-us {
+    margin-left: 100px;
+  }
+}
