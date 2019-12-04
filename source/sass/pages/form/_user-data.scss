@@ -125,7 +125,6 @@ small {
   .user-data__contact--phone,
   .user-data__contact--email,
   .user-data__contact--comment {
-    //float: left;
     top: 50px;
     left: -100px;
   }
@@ -152,5 +151,11 @@ small {
   .order__button {
     width: 230px;
     order: -1;
+  }
+}
+
+@media (min-width: $large) {
+  .checkbox {
+    width: auto;
   }
 }
