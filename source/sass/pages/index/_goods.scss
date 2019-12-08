@@ -102,8 +102,30 @@
     height: 17px;
   }
 
+  .goods__title {
+    height: 539px;
+    padding: 65px 0 0 0;
+    font-size: 43px;
+    line-height: 50px;
+    background: #f9f9f9 url("../img/hero-tablet@1x.jpg") 50% 43% no-repeat;
+  }
+
   .goods__group {
     display: flex;
+    position: relative;
+    margin-bottom: 61px;
+
+    &::after {
+      content: "";
+      background: url("../img/bg-zigzag-fill.svg");
+      position: absolute;
+      height: 6px;
+      top:50%;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 5;
+    }
   }
 
   .goods__group-item {

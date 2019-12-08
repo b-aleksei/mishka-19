@@ -14,6 +14,10 @@
 .about-us__advantage {
   @include font(17, 700, 20);
 
+  p {
+    margin: 0;
+  }
+
   &::before {
     content: "";
     display: flex;
@@ -26,70 +30,91 @@
 }
 
 @media (min-width: $medium) {
+  .about-us__title {
+    font-size: 43px;
+    line-height: 50px;
+    margin-top: 75px;
+  }
+
   .about-us__advantages-list {
     display: flex;
     flex-wrap: wrap;
   }
 
   .about-us__advantage {
+    display: block;
     width: 50%;
+    font-size: 20px;
+    line-height: 22px;
   }
 
   .about-us__advantage--eko {
     order: -1;
+
+    p {
+      margin-left: 3px;
+    }
+
+    &::before {
+      content: url("../img/icon-feature-flower.svg");
+      margin: 20px 0 15px 2px;
+    }
   }
 
   .about-us__advantage--hand-made {
     order: 1;
+
+    &::before {
+      content: url("../img/icon-feature-ball.svg");
+      margin: 19px 0 16px 0;
+      width: 45px;
+    }
   }
 
   .about-us__advantage--style {
     order: 2;
+
+    p {
+      margin-left: 3px;
+    }
+
+    &::before {
+      content: url("../img/icon-feature-money.svg");
+      margin: 48px 0 25px 0;
+    }
   }
 
   .about-us__advantage--support {
     order: 3;
+
+    &::before {
+      content: url("../img/icon-feature-rocket.svg");
+      width: 55px;
+      margin: 46px 0 27px -4px;
+    }
   }
 
   .about-us__advantage--like {
     order: 4;
+
+    p {
+      margin-left: 3px;
+    }
+
+    &::before {
+      content: url("../img/icon-feature-heart.svg");
+      margin: 53px 0 20px 2px;
+    }
   }
 
   .about-us__advantage--gift {
     order: 5;
+
+    &::before {
+      content: url("../img/icon-feature-gift.svg");
+      margin: 54px 0 19px -4px;
+    }
   }
-}
-
-.about-us__advantage--eko::before {
-  content: url("../img/icon-feature-flower.svg");
-  margin-bottom: 16px;
-}
-
-.about-us__advantage--style::before {
-  content: url("../img/icon-feature-money.svg");
-  margin-bottom: 25px;
-}
-
-.about-us__advantage--like::before {
-  content: url("../img/icon-feature-heart.svg");
-  margin-top: 25px;
-}
-
-.about-us__advantage--hand-made::before {
-  content: url("../img/icon-feature-ball.svg");
-  margin: 29px 0 16px 0;
-  width: 45px;
-}
-
-.about-us__advantage--support::before {
-  content: url("../img/icon-feature-rocket.svg");
-  width: 55px;
-  margin: 18px 0 27px -4px;
-}
-
-.about-us__advantage--gift::before {
-  content: url("../img/icon-feature-gift.svg");
-  margin: 26px 0 19px -4px;
 }
 
 @media (min-width: $large) {
