@@ -1,6 +1,18 @@
 .product-info {
   position: relative;
+  padding-bottom: 42px;
   color: $lightBlack;
+
+  &::after {
+    content: "";
+    background: url("../img/bg-zigzag-line-mini2.svg");
+    position: absolute;
+    height: 6px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 5;
+  }
 }
 
 .product-info__title {
@@ -68,6 +80,12 @@
 }
 
 @media (min-width: $medium) {
+  .product-info::after {
+    left: 50px;
+    right: 50px;
+    height: 15.5px;
+  }
+
   .product-info__title {
     margin: 0 0 50px 0;
     font-size: 43px;
