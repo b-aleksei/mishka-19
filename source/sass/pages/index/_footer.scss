@@ -40,13 +40,35 @@
 }
 
 @media (min-width: $medium) {
-  .main-footer {
-    display: flex;
-    justify-content: space-between;
-  }
-
   .logo-footer {
     display: block;
     order: -1;
+    margin: 0 0 9px 2px;
+  }
+
+  .main-footer {
+    display: flex;
+    padding-top: 36px;
+    padding-bottom: 30px;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .copyright {
+    margin: 0;
+  }
+
+  .copyright__text {
+    padding-left: 6px;
+  }
+
+  .copyright__logo {
+    width: 35px;
+    margin-right: 2px;
+  }
+
+  .social-icon {
+    margin-left: 161px;
+    padding-top: 23px;
   }
 }

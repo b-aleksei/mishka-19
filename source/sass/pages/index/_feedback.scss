@@ -4,7 +4,7 @@
 
   &::after {
     content: "";
-    background: url("../img/bg-zigzag-line-mini.svg") repeat-x;
+    background: url("../img/bg-zigzag-line-mini2.svg") repeat-x;
     position: absolute;
     height: 6px;
     bottom: 0;
@@ -85,25 +85,52 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    padding-top: 76px;
+    padding-bottom: 100px;
+    background: url("../img/review@1x.jpg") no-repeat;
+
+    &::after {
+      background: url("../img/bg-zigzag-line-mini2.svg") repeat-x 26px 0;
+      height: 15.5px;
+      bottom: 0;
+      left: -50px;
+      z-index: 5;
+      right: -50px;
+    }
+  }
+
+  .feedback__title {
+    margin: 0 0 32px -2px;
+    font-size: 43px;
+    line-height: 50px;
+    order: -2;
+  }
+
+  .feedback__text {
+    font-size: 17px;
+    margin-bottom: 58px;
+  }
+
+  .feedback__user--name {
+    font-size: 18px;
+    margin-bottom: 3px;
   }
 
   .feedback__nav {
     width: 175px;
-    margin: -80px 0 0 auto;
+    margin: -83px 0 0 auto;
   }
 
   .feedback__button {
     width: 175px;
+    height: 52px;
+    margin: 3px 2px 0 0;
     order: -1;
-  }
-
-  .feedback__title {
-    order: -2;
   }
 }
 
 @media (min-width: $large) {
-  .about-us {
+  .feedback {
     margin-left: 100px;
   }
 }

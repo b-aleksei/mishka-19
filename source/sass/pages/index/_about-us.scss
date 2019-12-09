@@ -29,11 +29,52 @@
   }
 }
 
+.about-us__advantage--eko::before {
+  content: url("../img/icon-feature-flower.svg");
+  margin: 20px 0 15px 0;
+}
+
+.about-us__advantage--style::before {
+  content: url("../img/icon-feature-money.svg");
+  margin: 20px 0 25px 0;
+}
+
+.about-us__advantage--like::before {
+  content: url("../img/icon-feature-heart.svg");
+  margin: 27px 0 20px 0;
+}
+
+.about-us__advantage--hand-made::before {
+  content: url("../img/icon-feature-ball.svg");
+  margin: 28px 0 16px -3px;
+}
+
+.about-us__advantage--support::before {
+  content: url("../img/icon-feature-rocket.svg");
+  margin: 18px 0 27px -3px;
+}
+
+.about-us__advantage--gift::before {
+  content: url("../img/icon-feature-gift.svg");
+  margin: 25px 0 19px -4px;
+}
+
 @media (min-width: $medium) {
+  .about-us {
+    margin-bottom: 85px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+
   .about-us__title {
     font-size: 43px;
     line-height: 50px;
-    margin-top: 75px;
+    margin-top: 47px;
   }
 
   .about-us__advantages-list {
@@ -118,7 +159,7 @@
 }
 
 @media (min-width: $large) {
-  .feedback {
+  .about-us {
     margin-left: 100px;
   }
 }

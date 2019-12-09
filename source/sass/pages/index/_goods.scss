@@ -96,10 +96,14 @@
 }
 
 @media (min-width: $medium) {
-  .goods::after {
-    left: 50px;
-    right: 50px;
-    height: 17px;
+  .goods {
+    padding-bottom: 70px;
+
+    &::after {
+      left: 50px;
+      right: 50px;
+      height: 15.5px;
+    }
   }
 
   .goods__title {
@@ -113,14 +117,13 @@
   .goods__group {
     display: flex;
     position: relative;
-    margin-bottom: 61px;
+    margin-bottom: 45px;
 
     &::after {
       content: "";
-      background: url("../img/bg-zigzag-fill.svg");
+      background: url("../img/bg-zigzag-fill-mini.svg") repeat-x 29px 13px;
       position: absolute;
-      height: 6px;
-      top:50%;
+      height: 23px;
       bottom: 0;
       left: 0;
       right: 0;
@@ -132,8 +135,24 @@
     flex-grow: 1;
   }
 
-  .goods__link::before {
-    left: 0;
-    right: 0;
+  .goods__link {
+    padding: 27px 105px 30px 37px;
+    font-size: 20px;
+    line-height: 30px;
+
+    &::before {
+      left: 0;
+      right: 0;
+    }
+  }
+
+  .goods__link--interior::after {
+    top: 30px;
+    right: 36px;
+  }
+
+  .goods__link--toys::after {
+    top: 30px;
+    right: 36px;
   }
 }

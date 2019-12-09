@@ -36,6 +36,8 @@
 .contacts__email {
   border-bottom: 1px solid #62d1ba;
   padding-bottom: 5px;
+  color: $lightBlack;
+  text-decoration: none;
 }
 
 .contacts__map {
@@ -61,16 +63,54 @@
 }
 
 @media (min-width: $medium) {
+  .contacts__info {
+    margin-bottom: 33px;
+  }
+
+  .contacts__map {
+    margin-bottom: 55px;
+  }
+
+  .contacts__title {
+    position: relative;
+    margin-top: 61px;
+    font-size: 43px;
+    line-height: 50px;
+    padding-right: 80px;
+
+    &::after {
+      content: url("../img/icon-flag.svg");
+      position: absolute;
+      width: 47px;
+      height: 82px;
+      top: -14px;
+      right: 5px;
+    }
+  }
+
   .contacts__data tbody {
     display: flex;
   }
 
   .contacts__row {
     width: 50%;
+    font-size: 17px;
+    display: flex;
+  }
+
+  .contacts__cell {
+    padding-top: 23px;
+  }
+
+  .contacts__cell--value {
+    width: 100%;
+    margin-left: 26px;
   }
 
   .contacts__button {
     width: 230px;
+    margin-bottom: 57px;
+    font-size: 17px;
   }
 }
 
