@@ -134,3 +134,15 @@
     right: 36px;
   }
 }
+
+@media (min-width: $large) {
+  .goods::after {
+    background: url("../img/bg-zigzag-fill-mini.svg") repeat-x 16px 22px;
+    height: 37px;
+  }
+  .goods__title {
+    font-size: 53px;
+    line-height: 57px;
+    background: #f9f9f9 url("../img/hero-desktop@1x.jpg") 50% 43% no-repeat;
+  }
+}

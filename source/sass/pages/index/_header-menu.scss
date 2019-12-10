@@ -233,7 +233,8 @@
   .header__link--catalog,
   .header__link--knitting {
     font-size: 17px;
-    padding: 30px 0 0 0;
+    padding: 30px 20px 0 0;
+    max-width: 200px;
   }
 
   .header__item--knitting {
@@ -258,5 +259,6 @@
 
   .header__item:not(.header__item--search) {
     min-width: 220px;
+    max-width: 400px;
   }
 }
