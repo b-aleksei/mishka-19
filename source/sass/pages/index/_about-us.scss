@@ -61,7 +61,7 @@
 
 @media (min-width: $medium) {
   .about-us {
-    margin-bottom: 85px;
+    margin-bottom: 83px;
 
     &::after {
       content: "";
@@ -74,7 +74,8 @@
   .about-us__title {
     font-size: 43px;
     line-height: 50px;
-    margin-top: 47px;
+    margin-top: 75px;
+    margin-left: -4px;
   }
 
   .about-us__advantages-list {
@@ -92,13 +93,9 @@
   .about-us__advantage--eko {
     order: -1;
 
-    p {
-      margin-left: 3px;
-    }
-
     &::before {
       content: url("../img/icon-feature-flower.svg");
-      margin: 20px 0 15px 2px;
+      margin: 20px 0 15px 0;
     }
   }
 
@@ -107,17 +104,13 @@
 
     &::before {
       content: url("../img/icon-feature-ball.svg");
-      margin: 19px 0 16px 0;
+      margin: 19px 0 16px -2px;
       width: 45px;
     }
   }
 
   .about-us__advantage--style {
     order: 2;
-
-    p {
-      margin-left: 3px;
-    }
 
     &::before {
       content: url("../img/icon-feature-money.svg");
@@ -131,20 +124,16 @@
     &::before {
       content: url("../img/icon-feature-rocket.svg");
       width: 55px;
-      margin: 46px 0 27px -4px;
+      margin: 46px 0 27px -6px;
     }
   }
 
   .about-us__advantage--like {
     order: 4;
 
-    p {
-      margin-left: 3px;
-    }
-
     &::before {
       content: url("../img/icon-feature-heart.svg");
-      margin: 53px 0 20px 2px;
+      margin: 53px 0 20px 0;
     }
   }
 
@@ -153,7 +142,7 @@
 
     &::before {
       content: url("../img/icon-feature-gift.svg");
-      margin: 54px 0 19px -4px;
+      margin: 54px 0 19px -6px;
     }
   }
 }
