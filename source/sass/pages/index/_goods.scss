@@ -1,17 +1,7 @@
 .goods {
-  padding-bottom: 42px;
   position: relative;
 
-  &::after {
-    content: "";
-    background: url("../img/bg-zigzag-line-mini2.svg");
-    position: absolute;
-    height: 6px;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 5;
-  }
+  @include backgrondStrech(#f9f9f9);
 }
 
 .goods__title-wrapper {
@@ -26,8 +16,6 @@
   padding-top: 71px;
   padding-bottom: 123px;
   background: #f9f9f9 url("../img/hero-mobile@1x.jpg") 50% 18% no-repeat;
-
-  @include backgrondStrech(#f9f9f9);
 }
 
 .goods__group {
@@ -96,14 +84,15 @@
 }
 
 @media (min-width: $medium) {
-  .goods {
-    padding-bottom: 70px;
-
-    &::after {
-      left: 50px;
-      right: 50px;
-      height: 15.5px;
-    }
+  .goods::after {
+    content: "";
+    background: url("../img/bg-zigzag-fill-mini.svg") repeat-x 29px 13px;
+    position: absolute;
+    height: 23px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 5;
   }
 
   .goods__title {
@@ -118,17 +107,6 @@
     display: flex;
     position: relative;
     margin-bottom: 45px;
-
-    &::after {
-      content: "";
-      background: url("../img/bg-zigzag-fill-mini.svg") repeat-x 29px 13px;
-      position: absolute;
-      height: 23px;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      z-index: 5;
-    }
   }
 
   .goods__group-item {

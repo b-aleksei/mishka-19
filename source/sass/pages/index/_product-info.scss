@@ -1,6 +1,18 @@
 .product-info {
   position: relative;
+  padding-bottom: 42px;
   color: $lightBlack;
+
+  &::after {
+    content: "";
+    background: url("../img/bg-zigzag-line-mini2.svg");
+    position: absolute;
+    height: 6px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 5;
+  }
 }
 
 .product-info__title {
@@ -68,8 +80,18 @@
 }
 
 @media (min-width: $medium) {
+  .product-info {
+    min-height: 555px;
+    display: flex;
+    flex-direction: column;
+
+    &::after {
+      height: 15.5px;
+    }
+  }
+
   .product-info__title {
-    margin: 0 0 50px 0;
+    margin: 0 0 29px -2px;
     font-size: 43px;
     line-height: 50px;
   }
@@ -77,14 +99,14 @@
   .product-info__hit {
     position: absolute;
     top: 12px;
-    right: 30px;
+    right: 79px;
     width: 70px;
     text-align: center;
     line-height: 17px;
   }
 
   .product-info__feature {
-    margin-bottom: 54px;
+    margin-bottom: auto;
   }
 
   .product-info__descriptions {
@@ -95,15 +117,15 @@
 
   .product-info__picture {
     position: absolute;
-    top: 0;
-    right: 0;
-    width: 50%;
-    margin: 5px 2px 0 0;
+    top: 7px;
+    right: 2px;
+    width: 333px;
   }
 
   .product-info__options,
   .product-info__wrap-center {
-    width: 43.5%;
+    width: calc(100% - 377px);
+    margin-left: -2px;
   }
 
   .product-info__price {
@@ -115,11 +137,13 @@
 @media (min-width: $large) {
   .product-info {
     position: relative;
-    padding-left: 100px;
+    //padding-left: 100px;
   }
 
   .product-info__picture {
     z-index: -1;
+    right: 40px;
+    width: 525px;
   }
 
   .product-info__hit {
