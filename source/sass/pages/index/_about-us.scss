@@ -149,6 +149,13 @@
 
 @media (min-width: $large) {
   .about-us {
-    margin-left: 100px;
+    //margin-left: 100px;
+  }
+
+  .about-us__title {
+    font-size: 43px;
+    line-height: 50px;
+    margin-top: 75px;
+    margin-left: -4px;
   }
 }
