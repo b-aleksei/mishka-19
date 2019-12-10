@@ -53,7 +53,7 @@
   width: 50%;
   height: 52px;
   background-color: transparent;
-  border: 1px solid $borderGray;
+  border: 0;
   cursor: pointer;
 
   &::before {
@@ -91,7 +91,7 @@
 
     &::after {
       background: url("../img/bg-zigzag-line-mini2.svg") repeat-x 26px 0;
-      height: 15.5px;
+      height: 16px;
       bottom: 0;
       left: -50px;
       z-index: 5;
@@ -111,10 +111,16 @@
     margin-bottom: 58px;
   }
 
+  .feedback__contacts--wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 450px;
+  }
+
   .feedback__user--name {
     font-size: 18px;
     margin-bottom: 3px;
-    max-width: 450px;
   }
 
   .feedback__nav {
@@ -132,6 +138,32 @@
 
 @media (min-width: $large) {
   .feedback {
-    margin-left: 100px;
+    padding: 71px 50px 154px 174px;
+    margin-left: 50px;
+
+    &::after {
+      background-position: 0 0;
+      height: 21px;
+    }
+  }
+
+  .feedback__title {
+    margin: 0 0 31px -2px;
+    font-size: 53px;
+    line-height: 57px;
+    order: -2;
+  }
+
+  .feedback__button {
+    margin: 9px 0 0 0;
+  }
+
+  .feedback__text {
+    padding-right: 75px;
+    margin-bottom: 39px;
+  }
+
+  .feedback__user--name {
+    font-size: 17px;
   }
 }

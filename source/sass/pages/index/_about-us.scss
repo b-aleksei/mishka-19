@@ -149,13 +149,17 @@
 
 @media (min-width: $large) {
   .about-us {
-    //margin-left: 100px;
+    padding-left: 224px;
+    margin-bottom: 89px;
   }
 
   .about-us__title {
-    font-size: 43px;
-    line-height: 50px;
-    margin-top: 75px;
-    margin-left: -4px;
+    font-size: 53px;
+    line-height: 57px;
+    margin-top: 61px;
+  }
+
+  .about-us__advantage {
+    width: 40%;
   }
 }

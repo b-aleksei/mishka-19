@@ -85,18 +85,10 @@ body {
   //padding: 0 calc((100% - 320px + 60px) / 2);
 }
 
-.small-container {
-  padding: 0 30px;
-}
-
 @media (min-width: $medium) {
   .container {
     padding: 0 50px;
     //padding: 0 calc((100% - #{$medium} + 96px) / 2);
-  }
-
-  .small-container {
-    padding: 0 50px;
   }
 }
 
@@ -104,9 +96,5 @@ body {
   .container {
     padding: 0 50px;
     //padding: 0 calc((100% - #{$large} + 100px) / 2);
-  }
-
-  .small-container {
-    padding: 0 50px 0 222px;
   }
 }
