@@ -120,7 +120,9 @@
   }
 }
 
-.header__item--delivery {
+.header__item--delivery,
+.header__item--new,
+.header__item--sale {
   display: none;
 }
 
@@ -226,5 +228,35 @@
   .header__item--search,
   .header__item--basket {
     order: 0;
+  }
+
+  .header__link--catalog,
+  .header__link--knitting {
+    font-size: 17px;
+    padding: 30px 0 0 0;
+  }
+
+  .header__item--knitting {
+    margin-left: 0;
+  }
+
+  .header__item--search {
+    margin-left: calc(100% - 790px);
+  }
+
+  .header__item--new,
+  .header__item--sale {
+    display: block;
+  }
+
+  .header__link--sale,
+  .header__link--new {
+    display: block;
+    padding: 18px 20px 0 0;
+    font-size: 15px;
+  }
+
+  .header__item:not(.header__item--search) {
+    min-width: 220px;
   }
 }

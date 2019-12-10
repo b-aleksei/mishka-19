@@ -94,7 +94,7 @@ body {
 
 @media (min-width: $large) {
   .container {
-    //padding: 0 50px;
-    padding: 0 calc((100% - #{$large} + 100px) / 2);
+    padding: 0 50px;
+    //padding: 0 calc((100% - #{$large} + 100px) / 2);
   }
 }
