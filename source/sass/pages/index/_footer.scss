@@ -72,3 +72,9 @@
     padding-top: 23px;
   }
 }
+
+@media (min-width: $large) {
+  .social-icon {
+    margin-left: 351px;
+  }
+}

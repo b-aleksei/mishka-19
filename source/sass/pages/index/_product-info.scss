@@ -1,6 +1,5 @@
 .product-info {
   position: relative;
-  padding-left: 224px;
   padding-bottom: 42px;
   color: $lightBlack;
 
@@ -82,9 +81,10 @@
 
 @media (min-width: $medium) {
   .product-info {
-    min-height: 555px;
+    min-height: 582px;
     display: flex;
     flex-direction: column;
+    padding-bottom: 70px;
 
     &::after {
       height: 16px;
@@ -118,7 +118,7 @@
 
   .product-info__picture {
     position: absolute;
-    top: 7px;
+    top: 9px;
     right: 2px;
     width: 333px;
   }
@@ -138,6 +138,7 @@
 @media (min-width: $large) {
   .product-info {
     position: relative;
+    padding-left: 224px;
     padding-bottom: 94px;
     min-height: 758px;
 
