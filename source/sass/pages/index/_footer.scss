@@ -68,7 +68,8 @@
   }
 
   .social-icon {
-    margin-left: 160px;
+    //margin-left: 160px;
+    margin-left: calc(50% - 176px);
     padding-top: 23px;
   }
 }
