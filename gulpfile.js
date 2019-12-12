@@ -46,35 +46,19 @@ gulp.task("server", function () {
   });
 });
 
-gulp.task("im", function () {
-  return gulp.src("source/ddd/**/*.{png,jpg,svg}")
-    .pipe(imagemin([
-      imagemin.optipng({optimizationLevel: 3}),
-      imagemin.jpegtran({progressive: true}),
-      imagemin.svgo()
-    ]))
-    .pipe(gulp.dest("source/xxx3"))
-});
-
 gulp.task("images", function () {
-  return gulp.src("source/ddd/**/*.{png,jpg,svg}")
+  return gulp.src("source/img/**/*.{png,jpg,svg}")
     .pipe(cache(imagemin([
       imagemin.gifsicle({interlaced: true}),
       imagemin.jpegtran({progressive: true}),
       imageminJpegRecompress(),
-   /*   imageminJpegRecompress({
-        loops: 5,
-        min: 80,
-        max: 90,
-        quality:'high'
-      }),*/
       imagemin.svgo(),
       imagemin.optipng({optimizationLevel: 3}),
       pngquant({quality: '65-70', speed: 5})
     ],{
       verbose: true
     })))
-    .pipe(gulp.dest("source/xxx2"))
+    .pipe(gulp.dest("source/xxx"))
 });
 
 gulp.task('clear', () =>
