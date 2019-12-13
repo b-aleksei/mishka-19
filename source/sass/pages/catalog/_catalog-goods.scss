@@ -10,7 +10,7 @@
 
 .catalog-goods__title {
   position: relative;
-  padding: 69px 0 78px 11px;
+  padding: 69px 0 78px 0;
   margin: 0;
   text-align: center;
 
@@ -35,28 +35,31 @@
 
 .catalog-goods__link {
   display: block;
-
-  @include font(17, 700);
-  color: $black;
-  text-decoration: none;
 }
 
-.catalog-goods__name {
-  margin: 0 23px 0 29px;
+.catalog-goods__item-title {
+  @include font(17, 700, 24);
+  color: $black;
+  text-decoration: none;
+
+  & h3 {
+    font: inherit;
+    margin: 27px 10px 0 27px;
+  }
 }
 
 .catalog-goods__feature {
   color: $lightBlack;
   font-size: 13px;
   line-height: 30px;
-  margin: 6px 18px 19px 29px;
+  margin: 6px 18px 19px 27px;
 }
 
 .catalog-goods__bye-wrap {
   display: flex;
   justify-content: space-between;
-  padding-top: 7px;
-  margin: 0 25px 12px 29px;
+  padding-top: 5px;
+  margin: 0 25px 12px 27px;
   border-top: 1px solid $borderGray;
 }
 
@@ -98,46 +101,40 @@
   }
 
   .catalog-goods__item {
-    display: flex;
-    flex-direction: column;
     position: relative;
     margin-bottom: 52px;
-    height: 336px;
+  }
+
+  .catalog-goods__wrapper {
+    display: flex;
+  }
+
+  .catalog-goods__link {
+    width: 50%;
+  }
+
+  .catalog-goods__item-title h3 {
+    font-size: 20px;
+    margin-top: 25px;
   }
 
   .catalog-goods__name {
-    font-size: 20px;
-    padding: 24px 0 0 331px;
-    margin: 0 23px 0 29px;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
   }
 
   .catalog-goods__picture {
-    //float: left;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 334px;
     margin-bottom: 0;
-  }
-
-  .catalog-goods__wrapper-price {
-    display: flex;
-    flex-direction: column;
-    width: 334px;
-    margin-left: 334px;
-    flex-grow: 1;
   }
 
   .catalog-goods__feature {
     font-size: 15px;
-    margin-left: 25px;
-    margin-bottom: auto;
-    flex-grow: 1;
   }
 
   .catalog-goods__bye-wrap {
     padding-top: 4px;
-    margin: 0 25px 12px 32px;
+    margin: auto 25px 12px 32px;
     border-top: 1px solid $borderGray;
   }
 
