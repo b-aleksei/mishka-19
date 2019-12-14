@@ -9,25 +9,38 @@
 <body>
 <header class="main-header container">
   <nav class="header header--no-js">
-    <div class="logo">
-      <a href="index.html"><img src="img/logo-mobile.svg" alt="логотип" width="86" height="35"></a>
-    </div>
+    <a class="logo" href="index.html">
+      <picture>
+        <source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
+        <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+        <img src="img/logo-mobile.svg" alt="логотип" width="86" height="35">
+      </picture>
+    </a>
     <button class="header__menu-opener" type="button">
       <span class="header__button-icon"></span></button>
     <ul class="header__menu">
-      <li class="header__item">
-        <a class="header__link" href="catalog.html">Каталог товаров</a>
+      <li class="header__item header__item--catalog">
+        <a class="header__link header__link--catalog" href="catalog.html">Каталог товаров</a>
       </li>
-      <li class="header__item">
-        <a class="header__link" href="catalog.html">Вязание на заказ</a>
+      <li class="header__item header__item--knitting">
+        <a class="header__link header__link--knitting" href="catalog.html">Вязание на заказ</a>
       </li>
-      <li class="header__item">
+      <li class="header__item header__item--search">
         <input class="header__search" type="search" name="search" id="search" placeholder="Поиск по сайту">
         <label class="header__search-description" for="search"><span
           class="visually-hidden">Поиск по сайту</span></label>
       </li>
-      <li class="header__item">
+      <li class="header__item header__item--basket">
         <a class="header__link header__link--basket" href="catalog.html">Корзина<span>: пока пуста</span></a>
+      </li>
+      <li class="header__item header__item--new">
+        <a class="header__link header__link--new" href="receipt.html">Новые поступления</a>
+      </li>
+      <li class="header__item header__item--sale">
+        <a class="header__link header__link--sale" href="sale.html">Распродажа</a>
+      </li>
+      <li class="header__item header__item--delivery">
+        <a class="header__link header__link--delivery" href="delivery.html">Бесплатная доставка по России</a>
       </li>
     </ul>
   </nav>
@@ -37,51 +50,55 @@
     <h1 class="catalog-goods__title">Каталог товаров</h1>
     <ul class="catalog-goods__list">
       <li class="catalog-goods__item">
-        <a class="catalog-goods__link" href="rabbit.html">
-          <figure class="catalog-goods__wrapper">
+        <figure class="catalog-goods__wrapper">
+          <a class="catalog-goods__link" href="rabbit.html">
             <img class="catalog-goods__picture"
-              src="img/photo-hare-mobile@1x.jpg" width="260" height="195"
-              alt="Зайчик-попрыгайчик" srcset="img/photo-hare-tablet@1x.jpg 334w">
-            <figcaption class="catalog-goods__name">Зайчик-попрыгайчик</figcaption>
-          </figure>
-        </a>
-        <div class="catalog-goods__wrapper-price">
-          <p class="catalog-goods__feature">Рост 30 см, вес 200 г</p>
-          <div class="catalog-goods__bye-wrap">
-            <p class="catalog-goods__price">1 200 руб.</p>
-            <button class="catalog-goods__cart" type="button"></button>
-          </div>
-        </div>
+              srcset="img/photo-hare-mobile@1x.jpg 320w, img/photo-hare-tablet@1x.jpg 324w"
+              src="img/photo-hare-mobile@1x.jpg" width="260" height="195" alt="Зайчик-попрыгайчик">
+          </a>
+          <figcaption class="catalog-goods__name">
+            <a class="catalog-goods__item-title" href="rabbit.html"><h3>Зайчик-попрыгайчик</h3></a>
+            <p class="catalog-goods__feature">Рост 30 см, вес 200 г</p>
+            <div class="catalog-goods__bye-wrap">
+              <p class="catalog-goods__price">1 200 руб.</p>
+              <button class="catalog-goods__cart" type="button"><span class="visually-hidden">Купить</span></button>
+            </div>
+          </figcaption>
+        </figure>
       </li>
       <li class="catalog-goods__item">
-        <a class="catalog-goods__link" href="basket.html">
-          <figure class="catalog-goods__wrapper">
+        <figure class="catalog-goods__wrapper">
+          <a class="catalog-goods__link" href="basket.html">
             <img class="catalog-goods__picture"
               src="img/photo-bowl-mobile@1x.jpg" width="260" height="195"
               alt="Корзинка для белья" srcset="img/photo-bowl-tablet@1x.jpg 334w">
-            <figcaption class="catalog-goods__name">Корзинка для белья</figcaption>
-          </figure>
-        </a>
-        <p class="catalog-goods__feature">Диаметр 15 см, высота 10 см</p>
-        <div class="catalog-goods__bye-wrap">
-          <p class="catalog-goods__price">690 руб.</p>
-          <button class="catalog-goods__cart" type="button"></button>
-        </div>
+          </a>
+          <figcaption class="catalog-goods__name">
+            <a class="catalog-goods__item-title" href="basket.html"><h3>Корзинка для белья</h3></a>
+            <p class="catalog-goods__feature">Диаметр 15 см, высота 10 см</p>
+            <div class="catalog-goods__bye-wrap">
+              <p class="catalog-goods__price">690 руб.</p>
+              <button class="catalog-goods__cart" type="button"><span class="visually-hidden">Купить</span></button>
+            </div>
+          </figcaption>
+        </figure>
       </li>
       <li class="catalog-goods__item">
-        <a class="catalog-goods__link" href="big-basket.html">
           <figure class="catalog-goods__wrapper">
+        <a class="catalog-goods__link" href="big-basket.html">
             <img class="catalog-goods__picture"
               src="img/photo-toys-mobile@1x.jpg" width="260" height="195"
               alt="Большая корзинка для игрушек" srcset="img/photo-toys-tablet@1x.jpg 334w">
-            <figcaption class="catalog-goods__name">Большая корзинка для игрушек</figcaption>
-          </figure>
         </a>
+            <figcaption class="catalog-goods__name">
+              <a class="catalog-goods__item-title" href="big-basket.html"><h3>Большая корзинка<br>для игрушек</h3></a>
         <p class="catalog-goods__feature">Диаметр 30 см, высота 30 см</p>
         <div class="catalog-goods__bye-wrap">
           <p class="catalog-goods__price">1 500 руб.</p>
-          <button class="catalog-goods__cart" type="button"></button>
+          <button class="catalog-goods__cart" type="button"><span class="visually-hidden">Купить</span></button>
         </div>
+            </figcaption>
+          </figure>
       </li>
     </ul>
   </section>
