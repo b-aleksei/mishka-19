@@ -52,9 +52,11 @@
       <li class="catalog-goods__item">
         <figure class="catalog-goods__wrapper">
           <a class="catalog-goods__link" href="rabbit.html">
-            <img class="catalog-goods__picture"
-              srcset="img/photo-hare-mobile@1x.jpg 320w, img/photo-hare-tablet@1x.jpg 324w"
-              src="img/photo-hare-mobile@1x.jpg" width="260" height="195" alt="Зайчик-попрыгайчик">
+            <picture>
+              <source media="(min-width: 1150px)" srcset="img/photo-hare-desktop@1x.jpg">
+              <source media="(min-width: 768px)" srcset="img/photo-hare-tablet@1x.jpg">
+              <img class="catalog-goods__picture"             src="img/photo-hare-mobile@1x.jpg" width="260" height="195" alt="Зайчик-попрыгайчик">
+            </picture>
           </a>
           <figcaption class="catalog-goods__name">
             <a class="catalog-goods__item-title" href="rabbit.html"><h3>Зайчик-попрыгайчик</h3></a>
@@ -69,9 +71,11 @@
       <li class="catalog-goods__item">
         <figure class="catalog-goods__wrapper">
           <a class="catalog-goods__link" href="basket.html">
-            <img class="catalog-goods__picture"
-              src="img/photo-bowl-mobile@1x.jpg" width="260" height="195"
-              alt="Корзинка для белья" srcset="img/photo-bowl-tablet@1x.jpg 334w">
+            <picture>
+              <source media="(min-width: 1150px)" srcset="img/photo-bowl-desktop@1x.jpg">
+              <source media="(min-width: 768px)" srcset="img/photo-bowl-tablet@1x.jpg">
+            <img class="catalog-goods__picture"             src="img/photo-bowl-mobile@1x.jpg" width="260" height="195" alt="Корзинка для белья">
+            </picture>
           </a>
           <figcaption class="catalog-goods__name">
             <a class="catalog-goods__item-title" href="basket.html"><h3>Корзинка для белья</h3></a>
@@ -86,9 +90,12 @@
       <li class="catalog-goods__item">
           <figure class="catalog-goods__wrapper">
         <a class="catalog-goods__link" href="big-basket.html">
-            <img class="catalog-goods__picture"
-              src="img/photo-toys-mobile@1x.jpg" width="260" height="195"
-              alt="Большая корзинка для игрушек" srcset="img/photo-toys-tablet@1x.jpg 334w">
+          <picture>
+            <source media="(min-width: 1150px)" srcset="img/photo-toys-desktop@1x.jpg">
+            <source media="(min-width: 768px)" srcset="img/photo-toys-tablet@1x.jpg">
+            <img class="catalog-goods__picture"             src="img/photo-toys-mobile@1x.jpg" width="260"
+              height="195" alt="Большая корзинка для игрушек">
+          </picture>
         </a>
             <figcaption class="catalog-goods__name">
               <a class="catalog-goods__item-title" href="big-basket.html"><h3>Большая корзинка<br>для игрушек</h3></a>
@@ -163,14 +170,14 @@
     <p class="copyright__text">Разработано</p>
     <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive"
       aria-label="переход на HTML Academy">
-      <svg class="copyright__logo" xmlns="http://www.w3.org/2000/svg" width="27px" height="34px" viewBox="0 0 60 60">
+      <svg class="copyright__logo" xmlns="http://www.w3.org/2000/svg" width="27px" height="34px" viewBox="0 0 50 60">
         <path fill="#63d1bb"
           d="M30.2 5h-.2l-19.7 2.1v36.2l19.7 11.7 19.7-11.7v-36.2l-19.5-2.1zm17 36.8l-17.2 10.2-17.2-10.2v-14.8l17.1 10.2v1.8l-11.7-7v1.8l11.8 7.1v1.9l-11.8-7v1.8l11.8 7 11.9-7.1v-7.6l5.3-3.2v15.1zm-.1-17l-4.7 2.8-2.2 1.3-10.3-6.1v1.8l8.8 5.3h-.1l-.2.1-1.3.7-7.3-4.3v1.8l5.8 3.4-1.4.9-4.3-2.6v1.8l2.9 1.7-2.9 1.7-17-10.1 17-10.2 17.2 10zm.1-1.8l-17.3-10.2-17.1 10.2v-13.6l17.2-1.8 17.2 1.8v13.6z"/>
       </svg>
     </a>
   </div>
   <div class="logo-footer">
-    <a><img src="img/logo-footer.svg" alt="логотип" width="102" height="34"></a>
+    <a><img src="img/logo-footer.svg" alt="логотип HTML-Academy" width="102" height="34"></a>
   </div>
 </footer>
 <script src="js/script.js"></script>
