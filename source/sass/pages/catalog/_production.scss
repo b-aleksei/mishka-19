@@ -88,8 +88,20 @@
 @media (min-width: $large) {
   .production {
     position: relative;
+    padding-right: 50px;
     padding-left: 68.5%;
+    margin-bottom: 105px;
     height: 455px;
+  }
+
+  .production__title {
+    padding: 52px 0 0 0;
+    margin: 41px 0 35px 40px;
+
+    &::before {
+      top: 0;
+      left: 1px;
+    }
   }
 
   .production__wrap {
@@ -98,5 +110,16 @@
     left: 0;
     width: 65%;
     padding-top: 453px;
+  }
+
+  .production__text {
+    margin-right: 0;
+    margin-bottom: 45px;
+    overflow: hidden;
+  }
+
+  .production__button {
+    margin-left: 41px;
+    margin-right: 7px;
   }
 }
