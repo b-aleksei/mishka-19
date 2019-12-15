@@ -9,25 +9,38 @@
 <body>
 <header class="main-header container">
   <nav class="header header--no-js">
-    <div class="logo">
-      <a href="index.html"><img src="img/logo-mobile.svg" alt="логотип" width="86" height="35"></a>
-    </div>
+    <a class="logo" href="index.html">
+      <picture>
+        <source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
+        <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+        <img src="img/logo-mobile.svg" alt="логотип" width="86" height="35">
+      </picture>
+    </a>
     <button class="header__menu-opener" type="button">
       <span class="header__button-icon"></span></button>
     <ul class="header__menu">
-      <li class="header__item">
-        <a class="header__link" href="catalog.html">Каталог товаров</a>
+      <li class="header__item header__item--catalog">
+        <a class="header__link header__link--catalog" href="catalog.html">Каталог товаров</a>
       </li>
-      <li class="header__item">
-        <a class="header__link" href="catalog.html">Вязание на заказ</a>
+      <li class="header__item header__item--knitting">
+        <a class="header__link header__link--knitting" href="catalog.html">Вязание на заказ</a>
       </li>
-      <li class="header__item">
+      <li class="header__item header__item--search">
         <input class="header__search" type="search" name="search" id="search" placeholder="Поиск по сайту">
         <label class="header__search-description" for="search"><span
           class="visually-hidden">Поиск по сайту</span></label>
       </li>
-      <li class="header__item">
+      <li class="header__item header__item--basket">
         <a class="header__link header__link--basket" href="catalog.html">Корзина<span>: пока пуста</span></a>
+      </li>
+      <li class="header__item header__item--new">
+        <a class="header__link header__link--new" href="receipt.html">Новые поступления</a>
+      </li>
+      <li class="header__item header__item--sale">
+        <a class="header__link header__link--sale" href="sale.html">Распродажа</a>
+      </li>
+      <li class="header__item header__item--delivery">
+        <a class="header__link header__link--delivery" href="delivery.html">Бесплатная доставка по России</a>
       </li>
     </ul>
   </nav>
@@ -49,38 +62,46 @@
       </fieldset>
       <fieldset class="checkbox">
         <legend class="checkbox__title color-green">Цвет</legend>
-        <p><input class="checkbox__toggle visually-hidden" id="white" type="checkbox" name="white" checked><label
+        <div class="wrap-checkbox">
+          <p><input class="checkbox__toggle visually-hidden" id="white" type="checkbox"
+          name="white" checked><label
           class="checkbox__label" for="white">Белый</label></p>
-        <p><input class="checkbox__toggle visually-hidden" id="gray" type="checkbox" name="grey" checked><label
-          class="checkbox__label" for="gray">Серый</label></p>
-        <p><input class="checkbox__toggle visually-hidden" id="tiffany" type="checkbox" name="tiffany"><label
-          class="checkbox__label" for="tiffany">«Тиффани»</label></p>
-        <p><input class="checkbox__toggle visually-hidden" id="black" type="checkbox" name="black"><label
-          class="checkbox__label"
-          for="black">Черный</label></p>
-        <p><input class="checkbox__toggle visually-hidden" id="pink" type="checkbox" name="pink"><label
-          class="checkbox__label"
-          for="pink">Розовый</label></p>
-        <p><input class="checkbox__toggle visually-hidden" id="orange" type="checkbox" name="orange"><label
-          class="checkbox__label" for="orange">Оранжевый
-        </label></p>
+          <p><input class="checkbox__toggle visually-hidden" id="gray" type="checkbox" name="grey" checked><label
+            class="checkbox__label" for="gray">Серый</label></p>
+          <p><input class="checkbox__toggle visually-hidden" id="tiffany" type="checkbox" name="tiffany"><label
+            class="checkbox__label" for="tiffany">«Тиффани»</label></p>
+          <p><input class="checkbox__toggle visually-hidden" id="black" type="checkbox" name="black"><label
+            class="checkbox__label"
+            for="black">Черный</label></p>
+          <p><input class="checkbox__toggle visually-hidden" id="pink" type="checkbox" name="pink"><label
+            class="checkbox__label"
+            for="pink">Розовый</label></p>
+          <p><input class="checkbox__toggle visually-hidden" id="orange" type="checkbox" name="orange"><label
+            class="checkbox__label" for="orange">Оранжевый
+          </label></p>
+        </div>
       </fieldset>
       <fieldset class="user-data">
         <legend class="user-data__title color-green">ФИО</legend>
-        <p><label>Имя:<input class="user-data__field" type="text" name="first-name"
+        <p><label class="user-data__name"><span>Имя:</span><input class="user-data__field" type="text" name="first-name"
           placeholder="Введите ваше имя*" required></label></p>
-        <p><label>Фамилия:<input class="user-data__field" type="text" name="last-name"
+        <p><label class="user-data__name"><span>Фамилия:</span><input class="user-data__field" type="text" name="last-name"
           placeholder="Укажите фамилию*" required></label></p>
-        <p><label>Отчество:<input class="user-data__field" type="text" name="middle-name"
+        <p><label class="user-data__name"><span>Отчество:</span><input class="user-data__field" type="text"
+          name="middle-name"
           placeholder="Отчество, если желаете"></label></p>
-        <p><label class="user-data__contact user-data__contact--phone color-green" for="phone">тел</label><input
-          class="user-data__field user-data__field--phone" id="phone"
+        <div class="wrap-user-data">
+          <p><label class="user-data__contact user-data__contact--phone color-green"
+          for="phone">тел</label>
+            <input class="user-data__field user-data__field--phone" id="phone"
           type="text" name="phone"
-          placeholder="+7 ХХХ ХХХ ХХ ХХ*" required></p>
-        <p><label class="user-data__contact user-data__contact--email color-green" for="email">E-mail</label><input
-          class="user-data__field user-data__field--email" id="email"
-          type="text" name="email"
-          placeholder="Ваш Email*" required></p>
+          placeholder="+7 ХХХ ХХХ ХХ ХХ*" required>
+          </p>
+          <p><label class="user-data__contact user-data__contact--email color-green" for="email">E-mail</label>
+            <input class="user-data__field user-data__field--email" id="email"
+            type="text" name="email" placeholder="Ваш Email*" required>
+          </p>
+        </div>
         <p class="user-data__margin-bottom"><label
           class="user-data__contact user-data__contact--comment color-green" for="comment">Доп</label><textarea
           class="user-data__area" id="comment" name="comment"

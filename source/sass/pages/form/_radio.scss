@@ -1,6 +1,6 @@
 .radio {
   @include resetFieldset;
-  margin-bottom: 14px;
+  margin-bottom: 17px;
 }
 
 .radio__title {
@@ -28,4 +28,33 @@
 .radio__toggle:checked + label::before {
   background-color: $lightGreen;
   box-shadow: inset 0 0 0 9px #ffffff;
+}
+
+@media (min-width: $medium) {
+  .radio p {
+    margin-left: 167px;
+  }
+
+  .radio__title {
+    margin-bottom: 10px;
+    float: left;
+    top: 26px;
+  }
+
+  .radio__label {
+    font-size: 19px;
+    margin-bottom: 39px;
+    padding-left: 80px;
+
+    &::before {
+      top: -7px;
+      left: 0;
+      width: 52px;
+      height: 52px;
+    }
+  }
+
+  .radio__toggle:checked + label::before {
+    box-shadow: inset 0 0 0 14px #ffffff;
+  }
 }

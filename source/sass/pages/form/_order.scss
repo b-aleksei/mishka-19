@@ -21,3 +21,33 @@
   margin-bottom: 23px;
   color: $lightBlack;
 }
+
+@media (min-width: $medium) {
+  .order {
+    margin-bottom: 52px;
+  }
+
+  .order__title {
+    padding: 5px 0 81px 3px;
+    margin: 0 0 72px 0;
+    font-size: 43px;
+    line-height: 50px;
+
+    &::after {
+      content: "";
+      background: url("../img/bg-zigzag-fill-mini.svg") repeat-x 0 13px;
+      position: absolute;
+      height: 23px;
+      bottom: 0;
+      left: -50px;
+      right: -50px;
+      z-index: 5;
+    }
+  }
+
+  .order__text {
+    font-size: 17px;
+    line-height: 30px;
+    margin-bottom: 49px;
+  }
+}
