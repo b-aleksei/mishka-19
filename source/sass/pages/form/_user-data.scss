@@ -207,7 +207,45 @@ small {
 }
 
 @media (min-width: $large) {
-  .checkbox {
-    width: auto;
+  .user-data p {
+    margin: 15px 174px 25px 175px;
+  }
+
+  .user-data__title {
+    top: 29px;
+    left: 61px;
+  }
+
+  .wrap-user-data p {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .user-data__contact {
+    left: -112px;
+  }
+
+  .user-data__contact--phone::after {
+    right: -103px;
+  }
+
+  .user-data__contact--email::after {
+    right: -107px;
+  }
+
+  .user-data .user-data__margin-bottom {
+    margin: 0 175px 25px 175px;
+  }
+
+  .order__wrap-submit {
+    margin: 0 175px 0 175px;
+
+    small {
+      margin-top: 31px;
+    }
+  }
+
+  .order__button {
+    margin-top: 24px;
   }
 }

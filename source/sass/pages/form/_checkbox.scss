@@ -65,12 +65,26 @@
     line-height: 18px;
     height: auto;
     min-height: 39px;
-    //margin-bottom: 21px;
 
     &::before {
       top: -15px;
       width: 54px;
       height: 52px;
     }
+  }
+}
+
+@media (min-width: $large) {
+  .checkbox p {
+    width: 26.9%;
+  }
+
+  .wrap-checkbox {
+    margin-left: 153px;
+  }
+
+  .checkbox__title {
+    top: 64px;
+    left: 60px;
   }
 }

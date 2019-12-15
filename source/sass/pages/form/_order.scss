@@ -51,3 +51,26 @@
     margin-bottom: 49px;
   }
 }
+
+@media (min-width: $large) {
+  .order {
+    margin-bottom: 50px;
+  }
+
+  .order__title {
+    padding: 5px 0 106px 3px;
+    margin: 0 0 119px 0;
+    font-size: 53px;
+    line-height: 57px;
+
+    &::after {
+      background: url("../img/bg-zigzag-fill-mini.svg") repeat-x 0 15px;
+      height: 34px;
+    }
+  }
+
+  .order__text {
+    margin-left: 176px;
+    margin-right: 146px;
+  }
+}
