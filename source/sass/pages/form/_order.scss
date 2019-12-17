@@ -35,7 +35,10 @@
 
     &::after {
       content: "";
-      background: url("../img/bg-zigzag-fill-mini.svg") repeat-x 0 13px;
+      //background: url("../img/bg-zigzag-fill-mini.svg") repeat-x 0 13px;
+      background-image: url("../img/bg-zigzag-fill-mini.svg");
+      background-repeat: repeat-x;
+      background-position: 0 13px;
       position: absolute;
       height: 23px;
       bottom: 0;

@@ -84,10 +84,24 @@
           </tr>
         </table>
       </figcaption>
-      <img class="product-info__picture" src="img/triple-set-mobile@1x.jpg" alt="Вязаные корзинки"
-        srcset="img/triple-set-mobile@1x.webp 260w, img/triple-set-mobile@1x.jpg 260w, img/triple-set-mobile@2x.webp 520w,
-           img/triple-set-mobile@2x.jpg 520w, img/triple-set-tablet@1x.webp 333w, img/triple-set-tablet@1x.jpg 333w, img/triple-set-tablet@2x.webp 666w, img/triple-set-tablet@2x.jpg 666w, img/triple-set-desktop@1x.webp 525w, img/triple-set-desktop@1x.jpg 525w, img/triple-set-desktop@2x.webp 1050w, img/triple-set-desktop@2x.jpg 1050w"
-        sizes="(min-width: 1150px) 525px, (min-width: 768px) 333px, (min-width: 321px) 100vw, 260px">
+      <picture>
+        <source type="image/webp" media="(min-width: 1150px)"
+          srcset="img/triple-set-desktop@1x.webp 525w, img/triple-set-desktop@2x.webp 1050w" sizes="525px">
+        <source type="image/webp" media="(min-width: 768px)"
+          srcset="img/triple-set-tablet@1x.webp 333w, img/triple-set-tablet@2x.webp 666w" sizes="333px">
+        <source type="image/webp" media="(min-width: 321px)"
+        srcset="img/triple-set-tablet@1x.webp 333w, img/triple-set-tablet@2x.webp 666w, img/triple-set-desktop@1x.webp 525w, img/triple-set-desktop@2x.webp 1050w">
+        <source type="image/webp"
+          srcset="img/triple-set-mobile@1x.webp 260w, img/triple-set-mobile@2x.webp 520w" sizes="260px">
+
+        <source media="(min-width: 1150px)"
+          srcset="img/triple-set-desktop@1x.jpg 525w, img/triple-set-desktop@2x.jpg 1050w" sizes="525px">
+        <source media="(min-width: 768px)"
+          srcset="img/triple-set-tablet@1x.jpg 333w, img/triple-set-tablet@2x.jpg 666w" sizes="333px">
+        <source media="(min-width: 321px)"
+          srcset="img/triple-set-tablet@1x.jpg 333w, img/triple-set-tablet@2x.jpg 666w, img/triple-set-desktop@1x.jpg 525w, img/triple-set-desktop@2x.jpg 1050w">
+      <img class="product-info__picture" src="img/triple-set-mobile@1x.jpg" alt="Вязаные корзинки" width="260" height="315">
+      </picture>
     </figure>
     <div class="product-info__wrap-center">
       <p class="product-info__price">Цена: 990 руб.</p>
