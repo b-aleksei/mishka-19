@@ -4,8 +4,9 @@
 
 .catalog-goods__item {
   border: 1px solid $borderGray;
-  margin: 30px 0 0 0;
+  margin: 30px auto 0 auto;
   padding: 0;
+  max-width: 668px;
 }
 
 .catalog-goods__title {
@@ -103,6 +104,7 @@
   .catalog-goods__item {
     position: relative;
     margin-bottom: 52px;
+    max-width: 100%;
   }
 
   .catalog-goods__wrapper {
@@ -173,6 +175,11 @@
 
   .catalog-goods__item {
     width: 318px;
+    flex-grow: 1;
+  }
+
+  .catalog-goods__item:not(:last-child) {
+    margin-right: 4.5%;
   }
 
   .catalog-goods__picture {
