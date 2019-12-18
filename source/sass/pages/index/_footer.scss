@@ -6,7 +6,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 25px 0 20px 0;
+  padding: 26px 5px 20px 0;
   margin: 0 auto;
   list-style: none;
   border-bottom: 1px solid #e5e5e5;
@@ -30,9 +30,8 @@
 }
 
 .copyright__logo {
-  width: 35px;
-  height: 50px;
-  margin: 5px 6px 0 0;
+  margin: 14px 8px 0 0;
+  fill: #63d1bb;
 }
 
 .logo-footer {
@@ -60,15 +59,14 @@
 
   .copyright__text {
     padding-left: 6px;
+    margin-top: 16px;
   }
 
   .copyright__logo {
-    width: 35px;
-    margin: 5px 0 0 0;
+    margin: 11px 0 0 0;
   }
 
   .social-icon {
-    //margin-left: 160px;
     margin-left: calc(50% - 176px);
     padding-top: 23px;
   }
