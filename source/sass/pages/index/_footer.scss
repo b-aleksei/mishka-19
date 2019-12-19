@@ -74,6 +74,6 @@
 
 @media (min-width: $large) {
   .social-icon {
-    margin-left: 351px;
+    margin-left: calc(50% - 176px);
   }
 }
