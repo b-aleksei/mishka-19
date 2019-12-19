@@ -5,7 +5,8 @@
 
   &::after {
     content: "";
-    background: url("../img/bg-zigzag-line-mini2.svg");
+    background-image: url("../img/bg-zigzag-line-mini2.svg");
+    background-size: auto 6px;
     position: absolute;
     height: 6px;
     bottom: 0;
@@ -87,6 +88,7 @@
     padding-bottom: 70px;
 
     &::after {
+      background-size: auto 16px;
       height: 16px;
     }
   }
@@ -143,6 +145,7 @@
     min-height: 758px;
 
     &::after {
+      background-size: auto 21px;
       height: 21px;
     }
   }

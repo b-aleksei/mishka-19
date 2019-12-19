@@ -93,6 +93,7 @@
   .goods::after {
     content: "";
     background: url("../img/bg-zigzag-fill-mini.svg") repeat-x 29px 13px;
+    background-size: auto 23px;
     position: absolute;
     height: 23px;
     bottom: 0;
@@ -150,6 +151,7 @@
 @media (min-width: $large) {
   .goods::after {
     background: url("../img/bg-zigzag-fill-mini.svg") repeat-x 16px 22px;
+    background-size: auto 37px;
     height: 37px;
   }
 

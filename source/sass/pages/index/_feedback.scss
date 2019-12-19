@@ -4,8 +4,9 @@
 
   &::after {
     content: "";
-    background: url("../img/bg-zigzag-line-mini2.svg") repeat-x;
     position: absolute;
+    background: url("../img/bg-zigzag-line-mini2.svg") repeat-x;
+    background-size: auto 6px;
     height: 6px;
     bottom: 0;
     left: -30px;
@@ -50,15 +51,18 @@
 }
 
 .feedback__toggle {
+  display: flex;
   width: 50%;
   height: 52px;
   background-color: transparent;
-  border: 0;
   cursor: pointer;
+  border: 1px solid $borderGray;
 
   &::before {
     content: url("../img/icon-left-arrow.svg");
-    display: block;
+    width: 50px;
+    height: 26px;
+    margin: auto;
   }
 }
 
@@ -66,7 +70,7 @@
   border-left: none;
 
   &::before {
-    transform: rotate(180deg) translateY(3px);
+    transform: rotate(180deg);
   }
 }
 
@@ -92,6 +96,7 @@
 
     &::after {
       background: url("../img/bg-zigzag-line-mini2.svg") repeat-x 26px 0;
+      background-size: auto 16px;
       height: 16px;
       bottom: 0;
       left: -50px;
@@ -129,6 +134,10 @@
     margin: -83px 0 0 auto;
   }
 
+  .feedback__toggle {
+    border: 0;
+  }
+
   .feedback__button {
     width: 175px;
     height: 52px;
@@ -151,6 +160,7 @@
 
     &::after {
       background-position: 0 0;
+      background-size: auto 21px;
       height: 21px;
     }
   }
