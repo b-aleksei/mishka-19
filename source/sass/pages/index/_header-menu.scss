@@ -207,7 +207,12 @@
 
   .header__search {
     margin: 0;
-    opacity: 0;
+    pointer-events: none;
+    width: 82px;
+
+    &::placeholder {
+      font-size: 0;
+    }
   }
 
   .header__item--search {
@@ -236,14 +241,6 @@
     & svg {
       top: 34px;
       left: 31px;
-    }
-  }
-
-  .header__search {
-    width: 82px;
-
-    &::placeholder {
-      font-size: 0;
     }
   }
 }
