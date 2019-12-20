@@ -1,5 +1,5 @@
 .modal-container {
-  display: none;
+  //display: none;
   position: fixed;
   top: 0;
   left: 0;
@@ -39,7 +39,6 @@
 .modal__list {
   display: flex;
   justify-content: center;
-  //margin-bottom: 100px;
 
   @include resetList;
 
@@ -52,10 +51,18 @@
   display: block;
   width: 82px;
   height: 52px;
-  border: 2px solid $lightGreen;
+  border: 2px solid $borderGray;
 
   @include font(17, 700, 47);
   color: $lightBlack;
+
+  &:hover {
+    border-color: #c7c7c7;
+  }
+}
+
+.modal__option:checked + label {
+  border-color: #62d1ba;
 }
 
 .modal_add-to-cart {

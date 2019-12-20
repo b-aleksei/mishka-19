@@ -2,6 +2,18 @@
   background-color: #f1f1f1;
 }
 
+.social-icon__item svg,
+.logo-footer svg,
+.copyright__logo {
+  &:hover {
+    fill: #46c1ae;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
 .social-icon {
   display: flex;
   justify-content: center;
