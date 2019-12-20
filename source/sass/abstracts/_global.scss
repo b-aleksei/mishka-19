@@ -17,30 +17,6 @@ body {
   overflow-x: hidden;
 }
 
-.blue {
-  outline: 1px solid blue;
-}
-
-.red {
-  outline: 1px solid red;
-}
-
-.green {
-  outline: 1px solid green;
-}
-
-.temp {
-  background-color: rgba(0, 255, 0, 0.3);
-}
-
-.temp > * {
-  outline: 1px dotted red;
-}
-
-.temp > * > * {
-  outline: 1px dotted blue;
-}
-
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -79,6 +55,33 @@ body {
     background-color: $lightGreen;
   }
 }
+
+.header__link,
+.catalog-goods__item-title {
+  &:hover {
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  &:active {
+    color: rgba(0, 0, 0, 0.3);
+  }
+}
+
+.product-info__button,
+.contacts__button,
+.feedback__button,
+.production__button,
+.order__button {
+  &:hover {
+    color: #ffffff;
+    background-color: $lightBlack;
+  }
+
+  &:active {
+    color: #8d8d8d;
+  }
+}
+
 
 .container {
   padding: 0 30px;

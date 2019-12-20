@@ -23,7 +23,7 @@
         <a class="header__link header__link--catalog" href="catalog.html">Каталог товаров</a>
       </li>
       <li class="header__item header__item--knitting">
-        <a class="header__link header__link--knitting" href="catalog.html">Вязание на заказ</a>
+        <a class="header__link header__link--knitting" href="form.html">Вязание на заказ</a>
       </li>
       <li class="header__item header__item--search">
         <input class="header__search" type="search" name="search" id="search" placeholder="Поиск по сайту">
@@ -94,12 +94,12 @@
           <p><label class="user-data__contact user-data__contact--phone color-green"
           for="phone">тел</label>
             <input class="user-data__field user-data__field--phone" id="phone"
-          type="text" name="phone"
+          type="tel" name="phone" pattern="\+7\s[0-9]{3}\s[0-9]{3}\s[0-9]{2}\s[0-9]{2}"
           placeholder="+7 ХХХ ХХХ ХХ ХХ*" required>
           </p>
           <p><label class="user-data__contact user-data__contact--email color-green" for="email">E-mail</label>
             <input class="user-data__field user-data__field--email" id="email"
-            type="text" name="email" placeholder="Ваш Email*" required>
+            type="text" name="email" pattern="([A-z0-9_.-]{1,})@([A-z0-9_.-]{1,}).([A-z]{2,8})" placeholder="Ваш Email*" required>
           </p>
         </div>
         <p class="user-data__margin-bottom"><label

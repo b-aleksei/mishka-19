@@ -38,6 +38,16 @@
   padding-bottom: 5px;
   color: $lightBlack;
   text-decoration: none;
+
+  &:hover {
+    color: rgb(70, 193, 174);
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+
 }
 
 .contacts__map {

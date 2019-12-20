@@ -38,6 +38,16 @@
   display: block;
 }
 
+.catalog-goods__name {
+  &:hover {
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  &:active {
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+  }
+}
+
 .catalog-goods__item-title {
   @include font(17, 700, 24);
   color: $black;
@@ -72,6 +82,7 @@
   background-color: transparent;
   border: none;
   padding: 0;
+  cursor: pointer;
 
   &::before {
     content: url("../img/icon-cart.svg");
@@ -90,9 +101,10 @@
     line-height: 50px;
 
     &::after {
+      position: absolute;
       content: "";
       background: url("../img/bg-zigzag-fill-mini.svg") repeat-x 29px 13px;
-      position: absolute;
+      background-size: auto 23px;
       height: 23px;
       bottom: 0;
       left: -50px;
@@ -165,6 +177,7 @@
     &::after {
       height: 34px;
       background-position: 4px 13px;
+      background-size: auto 34px;
     }
   }
 

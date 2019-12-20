@@ -34,12 +34,10 @@
     line-height: 50px;
 
     &::after {
-      content: "";
-      //background: url("../img/bg-zigzag-fill-mini.svg") repeat-x 0 13px;
-      background-image: url("../img/bg-zigzag-fill-mini.svg");
-      background-repeat: repeat-x;
-      background-position: 0 13px;
       position: absolute;
+      content: "";
+      background: url("../img/bg-zigzag-fill-mini.svg") repeat-x 0 13px;
+      background-size: auto 23px;
       height: 23px;
       bottom: 0;
       left: -50px;
@@ -68,6 +66,7 @@
 
     &::after {
       background: url("../img/bg-zigzag-fill-mini.svg") repeat-x 0 15px;
+      background-size: auto 34px;
       height: 34px;
     }
   }
