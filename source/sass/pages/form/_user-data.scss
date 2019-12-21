@@ -18,6 +18,11 @@
   &::placeholder {
     opacity: 0.3;
   }
+
+  &:hover,
+  &:focus {
+    border-bottom-color: $lightGreen;
+  }
 }
 
 .user-data__contact {
@@ -76,6 +81,11 @@
   border: 2px solid $lightBlack;
   font-weight: 400;
   line-height: 18px;
+
+  &:hover,
+  &:focus {
+    border-color: $lightGreen;
+  }
 }
 
 small {
