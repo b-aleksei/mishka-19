@@ -1,6 +1,6 @@
 .radio {
   @include resetFieldset;
-  margin-bottom: 17px;
+  margin-bottom: 14px;
 }
 
 .radio__title {
@@ -36,6 +36,10 @@
 }
 
 @media (min-width: $medium) {
+  .radio {
+    margin-bottom: 17px;
+  }
+
   .radio p {
     margin-left: 167px;
   }
