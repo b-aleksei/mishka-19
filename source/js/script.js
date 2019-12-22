@@ -33,4 +33,3 @@ closeModal.addEventListener('click', function (evt) {
   evt.preventDefault();
   modal.classList.remove('visible');
 });
-
