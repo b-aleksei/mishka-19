@@ -32,7 +32,7 @@
         <input class="header__search" type="search" name="search" id="search" placeholder="Поиск по сайту">
         <label class="header__search-description" for="search">
           <svg width="17.6" height="17.6">
-            <use xlink:href="#icon-search" ></use>
+            <use xlink:href="#icon-search"></use>
           </svg>
         </label>
       </li>
@@ -71,7 +71,6 @@
                 srcset="img/photo-hare-tablet@1x.webp 334w, img/photo-hare-mobile@2x.webp 520w, img/photo-hare-tablet@2x.webp 668w">
               <source type="image/webp"
                 srcset="img/photo-hare-mobile@1x.webp 260w, img/photo-hare-mobile@2x.webp 520w" sizes="260px">
-
               <source media="(min-width: 1150px)"
                 srcset="img/photo-hare-desktop@1x.jpg 316w, img/photo-hare-desktop@2x.jpg 632w">
               <source media="(min-width: 768px)"
@@ -105,7 +104,6 @@
                 srcset="img/photo-bowl-tablet@1x.webp 334w, img/photo-bowl-mobile@2x.webp 520w, img/photo-bowl-tablet@2x.webp 668w">
               <source type="image/webp"
                 srcset="img/photo-bowl-mobile@1x.webp 260w, img/photo-bowl-mobile@2x.webp 520w" sizes="260px">
-
               <source media="(min-width: 1150px)"
                 srcset="img/photo-bowl-desktop@1x.jpg 316w, img/photo-bowl-desktop@2x.jpg 632w">
               <source media="(min-width: 768px)"
@@ -113,7 +111,8 @@
               <source media="(min-width: 321px)"
                 srcset="img/photo-bowl-tablet@1x.jpg 334w, img/photo-bowl-mobile@2x.jpg 520w, img/photo-bowl-tablet@2x.jpg 668w">
               <img class="catalog-goods__picture" src="img/photo-bowl-mobile@1x.jpg" width="260" height="195"
-                alt="Корзинка для белья" srcset="img/photo-bowl-mobile@1x.jpg 260w, img/photo-bowl-mobile@2x.jpg 520w" sizes="260px">
+                alt="Корзинка для белья" srcset="img/photo-bowl-mobile@1x.jpg 260w, img/photo-bowl-mobile@2x.jpg 520w"
+                sizes="260px">
             </picture>
           </a>
           <figcaption class="catalog-goods__name">
@@ -138,7 +137,6 @@
                 srcset="img/photo-toys-tablet@1x.webp 334w, img/photo-toys-mobile@2x.webp 520w, img/photo-toys-tablet@2x.webp 668w">
               <source type="image/webp"
                 srcset="img/photo-toys-mobile@1x.webp 260w, img/photo-toys-mobile@2x.webp 520w" sizes="260px">
-
               <source media="(min-width: 1150px)"
                 srcset="img/photo-toys-desktop@1x.jpg 316w, img/photo-toys-desktop@2x.jpg 632w">
               <source media="(min-width: 768px)"
@@ -203,7 +201,7 @@
     <p class="copyright__text">Разработано</p>
     <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive"
       aria-label="переход на HTML Academy">
-      <svg class="copyright__logo" width="27px" height="34px" >
+      <svg class="copyright__logo" width="27px" height="34px">
         <use xlink:href="#logo-htmlacademy"></use>
       </svg>
     </a>
@@ -216,13 +214,11 @@
     </a>
   </div>
 </footer>
-<script src="js/script.js"></script>
-<script src="js/picturefill.min.js"></script>
 <div class="modal-container">
   <section class="modal">
     <h1 class="modal__title">Добавить в корзину</h1>
     <p class="modal__text">Выберите размер:</p>
-    <form action="https://echo.htmlacademy.ru." method="post">
+    <form class="modal__form" action="https://echo.htmlacademy.ru." method="post">
       <ul class="modal__list">
         <li class="modal__item">
           <input class="modal__option visually-hidden" type="radio" name="size" id="short">
@@ -237,9 +233,11 @@
           <label class="modal__label" for="large">L</label>
         </li>
       </ul>
-      <button class="modal_add-to-cart" type="submit">Добавить</button>
+      <button class="modal__add-to-cart" type="submit">Добавить</button>
     </form>
   </section>
 </div>
+<script src="js/script.js"></script>
+<script src="js/picturefill.min.js"></script>
 </body>
 </html>

@@ -50,11 +50,16 @@
 }
 
 .header__search {
-  margin: auto;
   width: 100%;
-  margin-top: 20px;
+  margin: 20px auto 0 auto;
   padding: 10px 0 10px 76px;
   border: none;
+
+  &:hover + label svg,
+  &:focus + label svg {
+    fill: $lightGreen;
+    opacity: 1;
+  }
 
   &::placeholder {
     font-size: 17px;
@@ -63,20 +68,28 @@
   }
 }
 
-.header__link--basket svg {
-  position: absolute;
-  top: 28px;
-  left: 31px;
-  z-index: 3;
-  opacity: 0.2;
-
-  &:hover {
+.header__link--basket {
+  &:hover svg,
+  &:focus svg {
     fill: $lightGreen;
     opacity: 1;
   }
 
-  &:active {
-    opacity: 0.3;
+  & svg {
+    position: absolute;
+    top: 28px;
+    left: 31px;
+    z-index: 3;
+    opacity: 0.2;
+
+    &:hover {
+      fill: $lightGreen;
+      opacity: 1;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
   }
 }
 
@@ -207,8 +220,8 @@
 
   .header__search {
     margin: 0;
-    pointer-events: none;
-    width: 82px;
+    padding: 0;
+    opacity: 0;
 
     &::placeholder {
       font-size: 0;
@@ -216,6 +229,7 @@
   }
 
   .header__item--search {
+    width: 84px;
     order: -2;
     margin-left: calc(100% - 348px);
     border-left: 1px solid $borderMain;
