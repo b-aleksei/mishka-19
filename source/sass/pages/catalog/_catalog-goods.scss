@@ -32,6 +32,7 @@
   width: 100%;
   height: auto;
   margin: 0 auto 20px auto;
+  background-color: #f1f1f1;
 }
 
 .catalog-goods__link {
@@ -69,6 +70,7 @@
 .catalog-goods__bye-wrap {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding-top: 5px;
   margin: 0 25px 12px 27px;
   border-top: 1px solid $borderGray;
@@ -79,10 +81,8 @@
 }
 
 .catalog-goods__cart {
-  background-color: transparent;
-  border: none;
-  padding: 0;
   cursor: pointer;
+  display: block;
 
   &::before {
     content: url("../img/icon-cart.svg");
@@ -174,10 +174,17 @@
     font-size: 53px;
     line-height: 57px;
 
+    &::before {
+      right: calc((100vw - #{$large} + 100px) / -2);
+      left: calc((100vw - #{$large} + 100px) / -2);
+    }
+
     &::after {
       height: 34px;
       background-position: 4px 13px;
       background-size: auto 34px;
+      right: calc((100vw - #{$large} + 100px) / -2);
+      left: calc((100vw - #{$large} + 100px) / -2);
     }
   }
 

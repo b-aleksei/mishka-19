@@ -68,6 +68,10 @@
   }
 }
 
+.radio__toggle:focus + label::before {
+  box-shadow: 0 0 0 2px blue, inset 0 0 0 14px #ffffff;
+}
+
 @media (min-width: $large) {
   .radio p {
     margin-left: 175px;

@@ -5,6 +5,10 @@
   <title>HTML Academy: Мишка</title>
   <link rel="stylesheet" href="css/normalize-min.css">
   <link rel="stylesheet" href="css/style.min.css">
+  <link rel="preload" href="fonts/opensans.woff" as="font">
+  <link rel="preload" href="fonts/opensans.woff2" as="font">
+  <link rel="preload" href="fonts/opensansbold.woff" as="font">
+  <link rel="preload" href="fonts/opensansbold.woff2" as="font">
 </head>
 <body>
 <div style="display: none;">
@@ -12,7 +16,7 @@
 </div>
 <header class="main-header container">
   <nav class="header header--no-js">
-    <a class="logo">
+    <a class="logo" tabindex="-1">
       <picture>
         <source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
         <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
@@ -117,7 +121,7 @@
     </figure>
     <div class="product-info__wrap-center">
       <p class="product-info__price">Цена: 990 руб.</p>
-      <a href="form.html" class="product-info__button button">Заказать</a>
+      <a href="order.html" class="product-info__button button">Заказать</a>
     </div>
   </section>
   <section class="about-us container">

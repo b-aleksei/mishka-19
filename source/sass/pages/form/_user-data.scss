@@ -122,10 +122,10 @@ small {
     align-items: center;
     font-size: 19px;
     line-height: 18px;
+  }
 
-    span {
-      margin-bottom: 5px;
-    }
+  .user-data__name span {
+    margin-bottom: 5px;
   }
 
   .user-data__field {
@@ -142,11 +142,11 @@ small {
     padding-bottom: 50px;
 
     @include backgrondStrech(#f1f1f1);
+  }
 
-    p {
-      margin-top: 0;
-      margin-bottom: 0;
-    }
+  .wrap-user-data p {
+    margin-top: 0;
+    margin-bottom: 0;
   }
 
   .user-data__contact--phone,
@@ -229,16 +229,14 @@ small {
     left: 61px;
   }
 
-  .wrap-user-data {
-    & p {
-      margin-top: 0;
-      margin-bottom: 0;
-    }
+  .wrap-user-data p {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
 
-    &::before {
-      right: calc((100vw - #{$large} + 100px) / -2);
-      left: calc((100vw - #{$large} + 100px) / -2);
-    }
+  .wrap-user-data::before {
+    right: calc((100vw - #{$large} + 100px) / -2);
+    left: calc((100vw - #{$large} + 100px) / -2);
   }
 
   .user-data__contact {

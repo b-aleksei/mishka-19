@@ -35,6 +35,10 @@
   border: 2px solid #c7c7c7;
 }
 
+.checkbox__toggle:focus + label::before {
+  box-shadow: 0 0 0 2px blue;
+}
+
 @media (min-width: $medium) {
   .checkbox {
     position: relative;
@@ -43,13 +47,13 @@
     padding-bottom: 9px;
     margin-bottom: 36px;
 
-    p {
-      width: 45.7%;
-      margin-top: 0;
-      margin-left: 22px;
-    }
-
     @include backgrondStrech(#f1f1f1);
+  }
+
+  .checkbox p {
+    width: 45.7%;
+    margin-top: 0;
+    margin-left: 22px;
   }
 
   .wrap-checkbox {
@@ -80,15 +84,13 @@
 }
 
 @media (min-width: $large) {
-  .checkbox {
-    & p {
-      width: 26.9%;
-    }
+  .checkbox::before {
+    right: calc((100vw - #{$large} + 100px) / -2);
+    left: calc((100vw - #{$large} + 100px) / -2);
+  }
 
-    &::before {
-      right: calc((100vw - #{$large} + 100px) / -2);
-      left: calc((100vw - #{$large} + 100px) / -2);
-    }
+  .checkbox p {
+    width: 26.9%;
   }
 
   .wrap-checkbox {
