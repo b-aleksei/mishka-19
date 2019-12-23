@@ -189,8 +189,8 @@
     @include backgrondStrech(#f9f9f9);
 
     &::before {
-      right: -50px;
-      left: -3060px;
+      right: -50vw;
+      left: -100vw;
       border-top: 1px solid $borderMain;
     }
   }
