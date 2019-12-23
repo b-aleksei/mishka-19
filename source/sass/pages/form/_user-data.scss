@@ -229,9 +229,16 @@ small {
     left: 61px;
   }
 
-  .wrap-user-data p {
-    margin-top: 0;
-    margin-bottom: 0;
+  .wrap-user-data {
+    & p {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+    &::before {
+      right: calc((100vw - #{$large} + 100px) / -2);
+      left: calc((100vw - #{$large} + 100px) / -2);
+    }
   }
 
   .user-data__contact {

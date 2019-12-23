@@ -80,8 +80,15 @@
 }
 
 @media (min-width: $large) {
-  .checkbox p {
-    width: 26.9%;
+  .checkbox {
+    & p {
+      width: 26.9%;
+    }
+
+    &::before {
+      right: calc((100vw - #{$large} + 100px) / -2);
+      left: calc((100vw - #{$large} + 100px) / -2);
+    }
   }
 
   .wrap-checkbox {

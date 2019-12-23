@@ -189,8 +189,8 @@
     @include backgrondStrech(#f9f9f9);
 
     &::before {
-      right: -50vw;
-      left: -100vw;
+      right: -50px;
+      left: calc(280px - 100vw);
       border-top: 1px solid $borderMain;
     }
   }
@@ -260,6 +260,10 @@
 }
 
 @media (min-width: $large) {
+  .header__item--delivery::before {
+    right: calc((100vw - #{$large} + 100px) / -2);
+  }
+
   .header__item--search,
   .header__item--basket {
     order: 0;
