@@ -35,8 +35,12 @@
 
   @include backgrondStrech($lightGreen);
 
+  &::before {
+    bottom: -3px;
+  }
+
   &:hover::before {
-    bottom: -5px;
+    bottom: -8px;
   }
 
   &:hover::after {
@@ -92,11 +96,11 @@
 @media (min-width: $medium) {
   .goods::after {
     content: "";
-    background: url("../img/bg-zigzag-fill-mini.svg") repeat-x 29px 13px;
+    background: url("../img/bg-zigzag-fill-mini.svg") repeat-x 1px 11px;
     background-size: auto 23px;
     position: absolute;
     height: 23px;
-    bottom: 0;
+    bottom: -3px;
     left: 0;
     right: 0;
     z-index: 5;
@@ -150,7 +154,7 @@
 
 @media (min-width: $large) {
   .goods::after {
-    background: url("../img/bg-zigzag-fill-mini.svg") repeat-x 16px 22px;
+    background: url("../img/bg-zigzag-fill-mini.svg") repeat-x 16px 18px;
     background-size: auto 37px;
     height: 37px;
   }

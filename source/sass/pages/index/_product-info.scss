@@ -22,11 +22,19 @@
   color: $black;
 }
 
-.product-info__hit {
-  @include font(17, 700, 20);
-  text-transform: uppercase;
-  color: $lightGreen;
-  margin-left: 1px;
+.hit {
+  position: relative;
+
+  &::before {
+    content: "Товар недели";
+    position: absolute;
+    bottom: -25px;
+    left: -2px;
+
+    @include font(17, 700, 20);
+    text-transform: uppercase;
+    color: $lightGreen;
+  }
 }
 
 .product-info__descriptions {
@@ -35,7 +43,7 @@
 
 .product-info__feature {
   position: relative;
-  margin: 21px 0 0 0;
+  margin: 49px 0 0 0;
 }
 
 .product-info__table {
@@ -99,16 +107,17 @@
     line-height: 50px;
   }
 
-  .product-info__hit {
-    position: absolute;
-    top: 12px;
-    right: 79px;
+  .hit::before {
+    bottom: 3px;
+    left: unset;
+    right: 30px;
+    line-height: 17px;
     width: 70px;
     text-align: center;
-    line-height: 17px;
   }
 
   .product-info__feature {
+    margin-top: 21px;
     margin-bottom: auto;
   }
 
@@ -139,8 +148,7 @@
 
 @media (min-width: $large) {
   .product-info {
-    position: relative;
-    padding-left: 224px;
+    padding-left: calc(((100% - #{$large} + 100px) / 2) + 174px);
     padding-bottom: 94px;
     min-height: 758px;
 
@@ -168,17 +176,17 @@
 
   .product-info__picture {
     z-index: -1;
-    top: 29px;
-    right: 49px;
+    top: -158px;
+    right: 0;
     width: 525px;
   }
 
-  .product-info__hit {
-    top: 95px;
-    left: 95px;
-  }
-
-  .product-info__feature {
-    position: static;
+  .hit::before {
+    bottom: 7px;
+    left: -126px;
+    right: unset;
+    line-height: 17px;
+    width: 70px;
+    text-align: center;
   }
 }

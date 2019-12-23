@@ -82,6 +82,13 @@ body {
   }
 }
 
+.red {
+  outline: 1px solid red;
+}
+
+.blue {
+  outline: 1px solid blue;
+}
 
 .container {
   padding: 0 30px;
@@ -90,8 +97,8 @@ body {
 
 @media (min-width: $medium) {
   .container {
-    padding: 0 50px;
-    //padding: 0 calc((100% - #{$medium} + 96px) / 2);
+    //padding: 0 50px;
+    padding: 0 calc((100% - #{$medium} + 96px) / 2);
   }
 }
 

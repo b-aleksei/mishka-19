@@ -163,8 +163,11 @@
 
 @media (min-width: $large) {
   .feedback {
-    padding: 71px 50px 154px 174px;
-    margin-left: 50px;
+    padding-top: 71px;
+    padding-bottom: 154px;
+    padding-left: calc(((100% - #{$large} + 100px) / 2) + 174px);
+    background-position: -174px -70px;
+    background-origin: content-box;
 
     &::after {
       background-position: 0 0;

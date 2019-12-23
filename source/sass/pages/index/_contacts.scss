@@ -146,7 +146,7 @@
   }
 
   .contacts__wrapper {
-    padding-left: 224px;
+    padding-left: calc(((100% - #{$large} + 100px) / 2) + 174px);
     padding-right: 0;
     width: calc(100% - 605px);
   }
@@ -160,7 +160,7 @@
     top: 0;
     right: 0;
     width: 526px;
-    margin-right: 50px;
+    margin-right: calc((100% - #{$large} + 96px) / 2);
     background: url("../img/map-desktop@1x.jpg") no-repeat 50%;
   }
 
