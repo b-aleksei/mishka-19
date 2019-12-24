@@ -3,7 +3,6 @@
 const gulp = require("gulp"),
 plumber = require("gulp-plumber"),
 uglify = require("gulp-uglify"),
-pipeline = require("readable-stream"),
 htmlmin = require("gulp-htmlmin"),
 sourcemap = require("gulp-sourcemaps"),
 sass = require("gulp-sass"),
@@ -34,13 +33,11 @@ gulp.task("css", function () {
     .pipe(rename("style.min.css"))
     .pipe(sourcemap.write("."))
     .pipe(gulp.dest("build/css"))
-    // .pipe(gulp.dest("source/css"))
     .pipe(server.stream());
 });
 
 gulp.task("server", function () {
   server.init({
-    // server: "source/",
     server: "build/",
     notify: false,
     open: true,
@@ -52,15 +49,8 @@ gulp.task("server", function () {
 gulp.task("js", function () {
   return gulp.src("source/js/script.js")
     .pipe(uglify())
+    .pipe(rename("script.min.js"))
     .pipe(gulp.dest("build/js/"));
-});
-
-gulp.task('compress', function () {
-  return pipeline(
-    gulp.src('source/js/script.js'),
-    uglify(),
-    gulp.dest('build/js')
-  );
 });
 
 gulp.task("images", function () {
@@ -94,7 +84,6 @@ gulp.task("sprite", function () {
       inlineSvg: true
     }))
     .pipe(rename("sprite.svg"))
-  // .pipe(gulp.dest("build/img"))
     .pipe(gulp.dest("source/img"))
 });
 
@@ -104,7 +93,6 @@ gulp.task("html", function () {
       include()
     ]))
   .pipe(gulp.dest("build"))
-    // .pipe(gulp.dest("source"))
 });
 
 gulp.task("minhtml", () => {
@@ -138,12 +126,6 @@ gulp.task("clean", function () {
 gulp.watch("source/sass/**/*.{scss,sass}", gulp.series("css"));
 gulp.watch("source/img/sprite.svg", gulp.series("copySprite", "html")).on("change", server.reload);
 gulp.watch("source/*.html", gulp.series("html")).on("change", server.reload);
-// gulp.watch("build/*.html").on("change", server.reload);
 
-/*gulp.task("refresh", function (done) {
-  server.reload();
-  done();
-});*/
-
-gulp.task("build", gulp.series("clean", "copy", "css", "html", "minhtml"));
+gulp.task("build", gulp.series("clean", "copy", "css", "html", "minhtml", "js"));
 gulp.task("start", gulp.series("build", "server"));
