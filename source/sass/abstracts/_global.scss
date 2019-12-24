@@ -17,30 +17,6 @@ body {
   overflow-x: hidden;
 }
 
-.blue {
-  outline: 1px solid blue;
-}
-
-.red {
-  outline: 1px solid red;
-}
-
-.green {
-  outline: 1px solid green;
-}
-
-.temp {
-  background-color: rgba(0, 255, 0, 0.3);
-}
-
-.temp > * {
-  outline: 1px dotted red;
-}
-
-.temp > * > * {
-  outline: 1px dotted blue;
-}
-
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -80,21 +56,44 @@ body {
   }
 }
 
-.container {
-  //padding: 0 30px;
-  padding: 0 calc((100% - 320px + 60px) / 2);
+.header__link,
+.catalog-goods__item-title {
+  &:hover {
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  &:active {
+    color: rgba(0, 0, 0, 0.3);
+  }
 }
 
-/*@media (min-width: $medium) {
+.product-info__button,
+.contacts__button,
+.feedback__button,
+.production__button,
+.order__button {
+  &:hover {
+    color: #ffffff;
+    background-color: $lightBlack;
+  }
+
+  &:active {
+    color: #8d8d8d;
+  }
+}
+
+.container {
+  padding: 0 30px;
+}
+
+@media (min-width: $medium) {
   .container {
-    //padding: 0 50px;
-    padding: 0 calc((100% - #{$medium} + 100px) / 2);
+    padding: 0 50px;
   }
 }
 
 @media (min-width: $large) {
   .container {
-    //padding: 0 50px;
     padding: 0 calc((100% - #{$large} + 100px) / 2);
   }
-}*/
+}

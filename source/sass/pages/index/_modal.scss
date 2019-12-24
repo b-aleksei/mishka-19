@@ -1,0 +1,129 @@
+.modal-container {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.9;
+  background-color: white;
+  z-index: 20;
+}
+
+.visible {
+  display: block;
+}
+
+.modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 320px;
+  height: 336px;
+  box-shadow: 0 5px 10px rgba(0, 1, 1, 0.25);
+  border: 1px solid #c6c6c6;
+  text-align: center;
+  animation: bounce 0.6s;
+}
+
+.modal__title {
+  padding: 29px 78px 0 78px;
+  margin: 0;
+
+  @include font(25, 700, 30);
+  text-transform: uppercase;
+}
+
+.modal__text {
+  color: $lightBlack;
+  margin-bottom: 26px;
+}
+
+.modal__form {
+  width: 260px;
+  margin: 0 auto;
+}
+
+.modal__list {
+  display: flex;
+  width: auto;
+  justify-content: center;
+
+  @include resetList;
+
+  li:not(:last-child) {
+    margin-right: 6px;
+  }
+}
+
+.modal__item {
+  flex-grow: 1;
+}
+
+.modal__label {
+  display: block;
+  height: 52px;
+  border: 2px solid $borderGray;
+
+  @include font(17, 700, 47);
+  color: $lightBlack;
+
+  &:hover {
+    border-color: #c7c7c7;
+  }
+}
+
+.modal__option:checked + label {
+  border-color: #62d1ba;
+}
+
+.modal__add-to-cart {
+  width: 100%;
+  height: 52px;
+  margin-top: 31px;
+  background-color: $lightGreen;
+  border: none;
+  text-transform: uppercase;
+
+  @include font(17, 700, 16);
+  color: #ffffff;
+}
+
+@media (min-width: $medium) {
+  .modal {
+    width: 584px;
+  }
+
+  .modal__form {
+    width: 350px;
+  }
+
+  .modal__title {
+    font-size: 30px;
+  }
+
+  .modal__text {
+    font-size: 17px;
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(-2000px);
+  }
+
+  70% {
+    transform: translateY(30px);
+  }
+
+  90% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}

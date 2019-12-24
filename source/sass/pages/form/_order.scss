@@ -22,3 +22,70 @@
   color: $lightBlack;
 }
 
+@media (min-width: $medium) {
+  .order {
+    margin-bottom: 52px;
+  }
+
+  .order__title {
+    padding: 5px 0 81px 3px;
+    margin: 0 0 72px 0;
+    font-size: 43px;
+    line-height: 50px;
+
+    &::after {
+      position: absolute;
+      content: "";
+      background: url("../img/bg-zigzag-fill-mini.svg") repeat-x 0 13px;
+      background-size: auto 23px;
+      height: 23px;
+      bottom: 0;
+      left: -50px;
+      right: -50px;
+      z-index: 5;
+    }
+  }
+
+  .order__text {
+    font-size: 17px;
+    line-height: 30px;
+    margin-bottom: 49px;
+  }
+}
+
+@media (min-width: $large) {
+  .order {
+    margin-bottom: 50px;
+  }
+
+  .order__title {
+    padding: 5px 0 106px 3px;
+    margin: 0 0 119px 0;
+    font-size: 53px;
+    line-height: 57px;
+
+    &::after {
+      background: url("../img/bg-zigzag-fill-mini.svg") repeat-x 0 15px;
+      background-size: auto 34px;
+      height: 34px;
+      right: calc((100vw - #{$large} + 100px) / -2);
+      left: calc((100vw - #{$large} + 100px) / -2);
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: calc((100vw - #{$large} + 100px) / -2);
+      left: calc((100vw - #{$large} + 100px) / -2);
+      bottom: 0;
+      z-index: -1;
+      background-color: #f1f1f1;
+    }
+  }
+
+  .order__text {
+    margin-left: 176px;
+    margin-right: 146px;
+  }
+}

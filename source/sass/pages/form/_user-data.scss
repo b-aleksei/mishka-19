@@ -1,15 +1,9 @@
 .user-data {
   @include resetFieldset;
-  //margin-bottom: 10px;
 }
 
 .user-data__title {
   margin-bottom: 12px;
-}
-
-.user-data__label {
-  display: block;
-
 }
 
 .user-data__field {
@@ -24,6 +18,35 @@
   &::placeholder {
     opacity: 0.3;
   }
+
+  &:hover,
+  &:focus {
+    border-bottom-color: $lightGreen;
+  }
+
+  &:hover + svg,
+  &:focus + svg {
+    fill: $lightGreen;
+    opacity: 1;
+  }
+}
+
+.wrap-user-data p {
+  position: relative;
+}
+
+.user-data__icon-phone {
+  position: absolute;
+  top: 34px;
+  right: 8px;
+  opacity: 0.2;
+}
+
+.user-data__icon-mail {
+  position: absolute;
+  top: 34px;
+  right: 4px;
+  opacity: 0.2;
 }
 
 .user-data__contact {
@@ -33,30 +56,10 @@
   &::before {
     top: 8px;
   }
-
-  &::after {
-    content: "";
-    position: absolute;
-    bottom: 19px;
-    right: 7px;
-    opacity: 0.2;
-  }
 }
 
-.user-data__contact--phone::after {
-  content: url("../img/icon-phone.svg");
-}
-
-.user-data__contact--email {
-  &::before {
-    left: 80px;
-  }
-
-  &::after {
-    content: url("../img/icon-mail.svg");
-    bottom: 11px;
-    right: 3px;
-  }
+.user-data__contact--email::before {
+  left: 80px;
 }
 
 .user-data__field--phone {
@@ -70,14 +73,23 @@
   padding-right: 40px;
 }
 
+.user-data__margin-bottom {
+  margin-bottom: 13px;
+}
+
 .user-data__area {
-  width: 260px;
+  width: 100%;
   height: 142px;
   margin-top: 25px;
   padding: 13px 15px;
   border: 2px solid $lightBlack;
   font-weight: 400;
   line-height: 18px;
+
+  &:hover,
+  &:focus {
+    border-color: $lightGreen;
+  }
 }
 
 small {
@@ -86,11 +98,172 @@ small {
 }
 
 .order__button {
-  display: block;
-  width: auto;
-  margin-top: 29px;
+  width: 100%;
+  margin-top: 33px;
   padding: 15px 20px;
   text-align: center;
   font-weight: 700;
   line-height: 16px;
+}
+
+@media (min-width: $medium) {
+  .user-data p {
+    margin: 15px 0 25px 167px;
+  }
+
+  .user-data__title {
+    float: left;
+    top: 29px;
+    width: 150px;
+  }
+
+  .user-data__name {
+    display: flex;
+    align-items: center;
+    font-size: 19px;
+    line-height: 18px;
+  }
+
+  .user-data__name span {
+    margin-bottom: 5px;
+  }
+
+  .user-data__field {
+    width: auto;
+    flex-grow: 1;
+    margin: 0 0 0 26px;
+    padding: 14px 0 16px 16px;
+    font-size: 19px;
+  }
+
+  .wrap-user-data {
+    position: relative;
+    margin: 50px 0 34px 0;
+    padding-bottom: 50px;
+
+    @include backgrondStrech(#f1f1f1);
+  }
+
+  .wrap-user-data p {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .user-data__contact--phone,
+  .user-data__contact--email {
+    margin: 0;
+  }
+
+  .user-data__field--phone,
+  .user-data__field--email {
+    width: 100%;
+    margin: 34px 0 0 0;
+    background-color: #f1f1f1;
+  }
+
+  .user-data__field--email {
+    margin: 10px 0 0 0;
+  }
+
+  .color-green::before {
+    background-color: transparent;
+  }
+
+  .user-data__icon-phone {
+    top: 61px;
+    right: 25px;
+  }
+
+  .user-data__icon-mail {
+    top: 35px;
+    right: 22px;
+  }
+
+  .user-data__contact {
+    top: 66px;
+    left: -166px;
+  }
+
+  .user-data__contact--comment {
+    top: 32px;
+  }
+
+  .user-data__contact--email {
+    top: 41px;
+  }
+
+  .user-data .user-data__margin-bottom {
+    margin: 0 0 25px 167px;
+  }
+
+  .user-data__area {
+    margin-top: 0;
+    font-size: 19px;
+  }
+
+  .order__wrap-submit {
+    display: flex;
+    justify-content: space-between;
+
+    small {
+      margin-top: 36px;
+      font-size: 17px;
+      line-height: 30px;
+    }
+  }
+
+  .order__button {
+    width: 230px;
+    margin-top: 29px;
+    order: -1;
+  }
+}
+
+@media (min-width: $large) {
+  .user-data p {
+    margin: 15px 174px 25px 175px;
+  }
+
+  .user-data__title {
+    top: 29px;
+    left: 61px;
+  }
+
+  .wrap-user-data p {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .wrap-user-data::before {
+    right: calc((100vw - #{$large} + 100px) / -2);
+    left: calc((100vw - #{$large} + 100px) / -2);
+  }
+
+  .user-data__contact {
+    left: -112px;
+  }
+
+  .user-data__icon-phone {
+    right: 10px;
+  }
+
+  .user-data__icon-mail {
+    right: 6px;
+  }
+
+  .user-data .user-data__margin-bottom {
+    margin: 0 175px 25px 175px;
+  }
+
+  .order__wrap-submit {
+    margin: 0 175px 0 175px;
+
+    small {
+      margin-top: 31px;
+    }
+  }
+
+  .order__button {
+    margin-top: 24px;
+  }
 }

@@ -1,12 +1,30 @@
 .header {
   position: relative;
-  margin-bottom: 16px;
-  padding-top: 22px;
+  padding: 22px 0 16px 0;
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: -50px;
+    left: -50px;
+    height: 1px;
+    background-color: $borderGray;
+  }
 }
 
 .logo {
+  display: block;
   width: 86px;
   margin: auto;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .header__menu-opener {
@@ -17,4 +35,43 @@
   cursor: pointer;
   background-color: transparent;
   border: none;
+}
+
+@media (min-width: $medium) {
+  .header {
+    padding: 0;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  .logo {
+    position: absolute;
+    top: 22px;
+    left: 0;
+
+    img {
+      width: 113px;
+      height: 46px;
+    }
+  }
+
+  .header__menu-opener {
+    display: none;
+  }
+}
+
+@media (min-width: $large) {
+  .logo {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    margin-left: -74px;
+
+    img {
+      width: 148px;
+      height: 73px;
+    }
+  }
 }

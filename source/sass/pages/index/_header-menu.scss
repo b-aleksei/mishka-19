@@ -3,7 +3,6 @@
   display: none;
   position: relative;
   top: 15px;
-  //left: -30px;
   left: calc(50% - 160px);
   background-color: #ffffff;
   z-index: 2;
@@ -14,9 +13,10 @@
   position: relative;
   flex-direction: column;
   width: 320px;
-  height: 79px;
+  min-height: 79px;
   border-top: 1px solid $borderGray;
 }
+
 
 .header__link {
   margin-top: 25px;
@@ -27,20 +27,39 @@
   color: $black;
 }
 
-.header__search-description::before {
-  content: url("../img/icon-search.svg");
+.header__item--basket {
+  border-bottom: 1px solid $borderGray;
+}
+
+.header__search-description svg {
   position: absolute;
   top: 33px;
   left: 33px;
   z-index: 3;
+  opacity: 0.2;
+  cursor: pointer;
+
+  &:hover {
+    fill: $lightGreen;
+    opacity: 1;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .header__search {
-  margin: auto;
   width: 100%;
-  margin-top: 20px;
+  margin: 20px auto 0 auto;
   padding: 10px 0 10px 76px;
   border: none;
+
+  &:hover + label svg,
+  &:focus + label svg {
+    fill: $lightGreen;
+    opacity: 1;
+  }
 
   &::placeholder {
     font-size: 17px;
@@ -50,15 +69,27 @@
 }
 
 .header__link--basket {
-  height: 78px;
-  border-bottom: 1px solid $borderGray;
+  &:hover svg,
+  &:focus svg {
+    fill: $lightGreen;
+    opacity: 1;
+  }
 
-  &::before {
-    content: url("../img/icon-cart.svg");
+  & svg {
     position: absolute;
-    top: 31px;
+    top: 28px;
     left: 31px;
     z-index: 3;
+    opacity: 0.2;
+
+    &:hover {
+      fill: $lightGreen;
+      opacity: 1;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
   }
 }
 
@@ -75,7 +106,7 @@
 .header--opened .header__menu {
   display: block;
   position: absolute;
-  top: 79px;
+  top: 78px;
 }
 
 .header__button-icon {
@@ -119,5 +150,154 @@
 
   &::after {
     transform: rotate(45deg);
+  }
+}
+
+.header__item--delivery,
+.header__item--new,
+.header__item--sale {
+  display: none;
+}
+
+.header__link--delivery {
+  font: inherit;
+}
+
+@media (min-width: $medium) {
+  .header__menu {
+    display: flex;
+    flex-wrap: wrap;
+    position: static;
+  }
+
+  .header__item {
+    position: relative;
+    z-index: 1;
+    width: auto;
+    min-height: 88px;
+    border-top: 0;
+  }
+
+  .header__item--delivery {
+    display: block;
+    margin-left: auto;
+    padding-top: 18px;
+    z-index: 0;
+    min-width: 231px;
+    max-width: 34%;
+
+    @include backgrondStrech(#f9f9f9);
+
+    &::before {
+      right: -50px;
+      left: calc(280px - 100vw);
+      border-top: 1px solid $borderMain;
+    }
+  }
+
+  .header__link--delivery {
+    padding-left: 0;
+  }
+
+  .header__link--catalog,
+  .header__link--knitting {
+    font-size: 15px;
+    padding: 18px 0 0 0;
+  }
+
+  .header__item--knitting {
+    margin-left: 36px;
+    max-width: 30%;
+  }
+
+  .header__item--catalog {
+    max-width: 30%;
+  }
+
+  .header__link {
+    margin: 0;
+  }
+
+  .header__search {
+    margin: 0;
+    padding: 0;
+    opacity: 0;
+
+    &::placeholder {
+      font-size: 0;
+    }
+  }
+
+  .header__item--search {
+    width: 84px;
+    order: -2;
+    margin-left: calc(100% - 348px);
+    border-left: 1px solid $borderMain;
+    border-right: 1px solid $borderMain;
+  }
+
+  .header__search-description svg {
+    top: 37px;
+  }
+
+  .header__item--basket {
+    order: -1;
+    width: 263px;
+    text-align: right;
+    border-bottom: 0;
+  }
+
+  .header__link--basket {
+    padding-top: 29px;
+    height: auto;
+    border-bottom: 0;
+
+    & svg {
+      top: 34px;
+      left: 31px;
+    }
+  }
+}
+
+@media (min-width: $large) {
+  .header__item--delivery::before {
+    right: calc((100vw - #{$large} + 100px) / -2);
+  }
+
+  .header__item--search,
+  .header__item--basket {
+    order: 0;
+  }
+
+  .header__link--catalog,
+  .header__link--knitting {
+    font-size: 17px;
+    padding: 30px 20px 0 0;
+    max-width: 200px;
+  }
+
+  .header__item--knitting {
+    margin-left: 0;
+  }
+
+  .header__item--search {
+    margin-left: calc(100% - 790px);
+  }
+
+  .header__item--new,
+  .header__item--sale {
+    display: block;
+  }
+
+  .header__link--sale,
+  .header__link--new {
+    display: block;
+    padding: 18px 20px 0 0;
+    font-size: 15px;
+  }
+
+  .header__item:not(.header__item--search) {
+    min-width: 220px;
+    max-width: 400px;
   }
 }

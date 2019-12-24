@@ -4,12 +4,14 @@
 
 .catalog-goods__item {
   border: 1px solid $borderGray;
-  margin: 30px 0 0 0;
+  margin: 30px auto 0 auto;
+  padding: 0;
+  max-width: 668px;
 }
 
 .catalog-goods__title {
   position: relative;
-  padding: 69px 0 78px 11px;
+  padding: 69px 0 78px 0;
   margin: 0;
   text-align: center;
 
@@ -25,37 +27,52 @@
   margin: 0;
 }
 
-.catalog-goods__picture-wrap {
-  margin: 0 auto 20px auto;
-}
-
 .catalog-goods__picture {
+  display: block;
   width: 100%;
   height: auto;
+  margin: 0 auto 20px auto;
+  background-color: #f1f1f1;
 }
 
 .catalog-goods__link {
-  @include font(17, 700);
-  color: $black;
-  text-decoration: none;
+  display: block;
 }
 
 .catalog-goods__name {
-  margin: 0 23px 0 29px;
+  &:hover {
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  &:active {
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.catalog-goods__item-title {
+  @include font(17, 700, 24);
+  color: $black;
+  text-decoration: none;
+
+  & h3 {
+    font: inherit;
+    margin: 27px 10px 0 27px;
+  }
 }
 
 .catalog-goods__feature {
   color: $lightBlack;
   font-size: 13px;
   line-height: 30px;
-  margin: 6px 18px 19px 29px;
+  margin: 6px 18px 19px 27px;
 }
 
 .catalog-goods__bye-wrap {
   display: flex;
   justify-content: space-between;
-  padding-top: 7px;
-  margin: 0 25px 12px 29px;
+  align-items: center;
+  padding-top: 5px;
+  margin: 0 25px 12px 27px;
   border-top: 1px solid $borderGray;
 }
 
@@ -64,11 +81,151 @@
 }
 
 .catalog-goods__cart {
-  background-color: transparent;
-  border: none;
-  padding: 0;
+  cursor: pointer;
+  display: block;
 
   &::before {
     content: url("../img/icon-cart.svg");
+  }
+}
+
+@media (min-width: $medium) {
+  .header__item--delivery::before {
+    background: #f1f1f1;
+  }
+
+  .catalog-goods__title {
+    padding: 7px 10px 78px 11px;
+    margin: 0 0 82px 0;
+    font-size: 43px;
+    line-height: 50px;
+
+    &::after {
+      position: absolute;
+      content: "";
+      background: url("../img/bg-zigzag-fill-mini.svg") repeat-x 29px 13px;
+      background-size: auto 23px;
+      height: 23px;
+      bottom: 0;
+      left: -50px;
+      right: -50px;
+      z-index: 5;
+    }
+  }
+
+  .catalog-goods__item {
+    position: relative;
+    margin-bottom: 52px;
+    max-width: 100%;
+  }
+
+  .catalog-goods__wrapper {
+    display: flex;
+  }
+
+  .catalog-goods__link {
+    width: 50%;
+  }
+
+  .catalog-goods__item-title h3 {
+    font-size: 20px;
+    margin-top: 25px;
+  }
+
+  .catalog-goods__name {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+  }
+
+  .catalog-goods__picture {
+    margin-bottom: 0;
+  }
+
+  .catalog-goods__feature {
+    font-size: 15px;
+    max-height: 184px;
+    overflow: hidden;
+  }
+
+  .catalog-goods__bye-wrap {
+    padding-top: 4px;
+    margin: auto 25px 10px 32px;
+    border-top: 1px solid $borderGray;
+  }
+
+  .catalog-goods__price {
+    font-size: 17px;
+  }
+
+  .catalog-goods__cart::before {
+    margin-right: 7px;
+  }
+}
+
+@media (min-width: $large) {
+  .catalog-goods {
+    margin-bottom: 4px;
+  }
+
+  .catalog-goods__title {
+    padding: 7px 10px 107px 11px;
+    margin: 0 0 94px 0;
+    font-size: 53px;
+    line-height: 57px;
+
+    &::before {
+      right: calc((100vw - #{$large} + 100px) / -2);
+      left: calc((100vw - #{$large} + 100px) / -2);
+    }
+
+    &::after {
+      height: 34px;
+      background-position: 4px 13px;
+      background-size: auto 34px;
+      right: calc((100vw - #{$large} + 100px) / -2);
+      left: calc((100vw - #{$large} + 100px) / -2);
+    }
+  }
+
+  .catalog-goods__list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .catalog-goods__item {
+    width: 318px;
+    flex-grow: 1;
+  }
+
+  .catalog-goods__item:not(:last-child) {
+    margin-right: 4.5%;
+  }
+
+  .catalog-goods__picture {
+    width: 100%;
+    height: auto;
+  }
+
+  .catalog-goods__wrapper {
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .catalog-goods__link,
+  .catalog-goods__name {
+    width: 100%;
+  }
+
+  .catalog-goods__name {
+    flex-grow: 1;
+  }
+
+  .catalog-goods__feature {
+    margin-bottom: 13px;
+  }
+
+  .catalog-goods__bye-wrap {
+    margin: auto 25px 11px 26px;
   }
 }
