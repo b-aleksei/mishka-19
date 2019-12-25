@@ -65,7 +65,6 @@
 
 .modal__label {
   display: block;
-  //min-width: 82px;
   height: 52px;
   border: 2px solid $borderGray;
 
@@ -93,7 +92,6 @@
   color: #ffffff;
 }
 
-
 @media (min-width: $medium) {
   .modal {
     width: 584px;
@@ -109,5 +107,23 @@
 
   .modal__text {
     font-size: 17px;
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(-2000px);
+  }
+
+  70% {
+    transform: translateY(30px);
+  }
+
+  90% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
   }
 }

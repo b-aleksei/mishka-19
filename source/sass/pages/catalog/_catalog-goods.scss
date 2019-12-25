@@ -80,12 +80,23 @@
   font-weight: 700;
 }
 
+.catalog-goods__cart svg {
+  margin-right: 8px;
+  opacity: 0.2;
+}
+
 .catalog-goods__cart {
   cursor: pointer;
   display: block;
 
-  &::before {
-    content: url("../img/icon-cart.svg");
+  &:hover svg,
+  &:focus svg {
+    fill: $lightGreen;
+    opacity: 1;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }
 
