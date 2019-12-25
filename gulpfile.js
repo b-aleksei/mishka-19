@@ -105,8 +105,6 @@ gulp.task("copy", function () {
   return gulp.src([
     "source/fonts/**/*.{woff,woff2}",
     "source/img/**",
-    "source/js/**",
-    "source/css/normalize-min.css",
     "source/*.ico"
   ], {
     base: "source"
@@ -131,6 +129,7 @@ gulp.task("refresh", function (done) {
 gulp.task("watch", function () {
 gulp.watch("source/sass/**/*.{scss,sass}", gulp.series("css"));
 gulp.watch("source/*.html", gulp.series("html")).on("change", server.reload);
+gulp.watch("source/js/*.js", gulp.series("js")).on("change", server.reload);
 gulp.watch("source/img/sprite.svg", gulp.series("copySprite", "html")).on("change", server.reload);
 });
 
