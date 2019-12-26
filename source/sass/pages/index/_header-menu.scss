@@ -198,6 +198,10 @@
     }
   }
 
+  .header__item--delivery-color::before {
+    background-color: #f1f1f1;
+  }
+
   .header__link--delivery {
     padding-left: 0;
   }

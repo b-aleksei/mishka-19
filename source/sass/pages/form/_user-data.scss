@@ -106,6 +106,10 @@ small {
   line-height: 16px;
 }
 
+.user-data__middle-name {
+  margin: 18px 0 16px 0;
+}
+
 @media (min-width: $medium) {
   .user-data p {
     margin: 15px 0 25px 167px;
