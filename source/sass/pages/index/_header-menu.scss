@@ -61,9 +61,15 @@
     opacity: 1;
   }
 
+  &:active + label svg {
+    fill: $lightGreen;
+    opacity: 0.3;
+  }
+
   &::placeholder {
     font-size: 17px;
     font-weight: 700;
+    color: #000000;
     opacity: 1;
   }
 }

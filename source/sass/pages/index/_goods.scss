@@ -39,6 +39,11 @@
     bottom: -3px;
   }
 
+  &::after {
+    position: absolute;
+    opacity: 0.5;
+  }
+
   &:hover::before {
     bottom: -8px;
   }
@@ -63,14 +68,10 @@
   word-wrap: break-word;
 }
 
-.goods__link--interior {
-  &::after {
-    content: url("../img/icon-interior.svg");
-    position: absolute;
-    top: 23px;
-    right: 4px;
-    opacity: 0.5;
-  }
+.goods__link--interior::after {
+  content: url("../img/icon-interior.svg");
+  top: 23px;
+  right: 4px;
 }
 
 .goods__link--toys {
@@ -80,10 +81,8 @@
 
   &::after {
     content: url("../img/icon-toy.svg");
-    position: absolute;
     top: 22px;
     right: -4px;
-    opacity: 0.5;
   }
 }
 
