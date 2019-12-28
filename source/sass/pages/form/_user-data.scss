@@ -137,6 +137,7 @@ small {
     flex-grow: 1;
     margin: 0 0 0 26px;
     padding: 14px 0 16px 16px;
+    height: 51px;
     font-size: 19px;
   }
 
@@ -201,7 +202,7 @@ small {
   }
 
   .user-data__area {
-    margin-top: 0;
+    margin: 0;
     font-size: 19px;
   }
 
@@ -256,14 +257,15 @@ small {
   }
 
   .user-data .user-data__margin-bottom {
-    margin: 0 175px 25px 175px;
+    margin: 0 175px 22px 175px;
+    min-height: 161px;
   }
 
   .order__wrap-submit {
     margin: 0 175px 0 175px;
 
     small {
-      margin-top: 31px;
+      margin-top: 32px;
     }
   }
 
