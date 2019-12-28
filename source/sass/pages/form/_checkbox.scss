@@ -24,15 +24,22 @@
     height: 40px;
     border: 2px solid $lightBlack;
   }
-
-  &:hover::before {
-    border: 2px solid $lightGreen;
-  }
 }
+
 
 .checkbox__toggle:checked + label::before {
   content: url("../img/icon-tick.svg");
   border: 2px solid #c7c7c7;
+}
+
+.checkbox__toggle:hover + label::before {
+  border: 2px solid $lightGreen;
+}
+
+.checkbox__toggle:disabled + label::before {
+  content: url("../img/icon-tick.svg");
+  border: 2px solid $black;
+  opacity: 0.4;
 }
 
 .checkbox__toggle:focus + label::before {
