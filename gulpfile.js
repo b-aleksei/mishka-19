@@ -17,9 +17,9 @@ autoprefixer = require("autoprefixer"),
 server = require("browser-sync").create(),
 webp = require("gulp-webp"),
 imagemin = require("gulp-imagemin"),
-imageminJpegRecompress = require('imagemin-jpeg-recompress'),
-pngquant = require('imagemin-pngquant'),
-cache = require('gulp-cache');
+imageminJpegRecompress = require("imagemin-jpeg-recompress"),
+pngquant = require("imagemin-pngquant"),
+cache = require("gulp-cache");
 
 gulp.task("css", function () {
   return gulp.src("source/sass/style.scss")
@@ -29,8 +29,9 @@ gulp.task("css", function () {
     .pipe(postcss([
       autoprefixer()
     ]))
+    .pipe(gulp.dest("build/css"))
     .pipe(csso())
-    .pipe(rename("style.min.css"))
+    .pipe(rename({suffix: ".min"}))
     .pipe(sourcemap.write("."))
     .pipe(gulp.dest("build/css"))
     .pipe(server.stream());
@@ -47,9 +48,9 @@ gulp.task("server", function () {
 });
 
 gulp.task("js", function () {
-  return gulp.src("source/js/script.js")
+  return gulp.src(["source/js/*.js", "!source/js/*.min.js"])
     .pipe(uglify())
-    .pipe(rename("script.min.js"))
+    .pipe(rename({suffix: ".min"}))
     .pipe(gulp.dest("build/js/"));
 });
 
@@ -61,14 +62,14 @@ gulp.task("images", function () {
       imageminJpegRecompress(),
       imagemin.svgo(),
       imagemin.optipng({optimizationLevel: 3}),
-      pngquant({quality: '65-70', speed: 5})
+      pngquant({quality: "65-70", speed: 5})
     ],{
       verbose: true
     })))
     .pipe(gulp.dest("source/img/img-compress"))
 });
 
-gulp.task('clear', () =>
+gulp.task("clear", () =>
   cache.clearAll()
 );
 
@@ -105,6 +106,7 @@ gulp.task("copy", function () {
   return gulp.src([
     "source/fonts/**/*.{woff,woff2}",
     "source/img/**",
+    "source/js/*.min.js",
     "source/*.ico"
   ], {
     base: "source"
@@ -133,5 +135,7 @@ gulp.watch("source/js/*.js", gulp.series("js")).on("change", server.reload);
 gulp.watch("source/img/sprite.svg", gulp.series("copySprite", "html")).on("change", server.reload);
 });
 
+gulp.task("updater", gulp.parallel("watch", "server"));
+
 gulp.task("build", gulp.series("clean", "copy", "css", "html", "minhtml", "js"));
-gulp.task("start", gulp.parallel("server", "watch"));
+gulp.task("start", gulp.series("build", "updater"));

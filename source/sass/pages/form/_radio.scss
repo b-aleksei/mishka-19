@@ -32,7 +32,39 @@
 .radio__toggle:checked + label::before {
   background-color: $lightGreen;
   box-shadow: inset 0 0 0 9px #ffffff;
+}
+
+.radio__toggle:active + label::before {
   border: 2px solid #c7c7c7;
+}
+
+.radio__toggle:focus + label::before {
+  border: 2px solid $lightGreen;
+}
+
+.radio__toggle:disabled + label::before {
+  background-color: #b1b1b1;
+  box-shadow: inset 0 0 0 9px #ffffff;
+  border-color: #b1b1b1;
+}
+
+.color-green {
+  display: block;
+  position: relative;
+  width: 100%;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: $lightGreen;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 60px;
+    right: 0;
+    height: 1px;
+    background-color: $lightGreen;
+  }
 }
 
 @media (min-width: $medium) {
@@ -66,10 +98,10 @@
   .radio__toggle:checked + label::before {
     box-shadow: inset 0 0 0 14px #ffffff;
   }
-}
 
-.radio__toggle:focus + label::before {
-  box-shadow: 0 0 0 2px blue, inset 0 0 0 14px #ffffff;
+  .radio__toggle:disabled + label::before {
+    box-shadow: inset 0 0 0 14px #ffffff;
+  }
 }
 
 @media (min-width: $large) {

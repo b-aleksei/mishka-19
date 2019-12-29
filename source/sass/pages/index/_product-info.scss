@@ -22,7 +22,7 @@
   color: $black;
 }
 
-.hit {
+.product-info__hit {
   position: relative;
 
   &::before {
@@ -108,7 +108,7 @@
     line-height: 50px;
   }
 
-  .hit::before {
+  .product-info__hit::before {
     bottom: 3px;
     left: unset;
     right: 30px;
@@ -149,13 +149,16 @@
 
 @media (min-width: $large) {
   .product-info {
-    padding-left: calc(((100% - #{$large} + 100px) / 2) + 174px);
+    padding-left: calc(50% - 351px);
     padding-bottom: 94px;
     min-height: 758px;
 
     &::after {
       background-size: auto 21px;
       height: 21px;
+      width: 1050px;
+      left: calc(50% - 525px);
+      right: unset;
     }
   }
 
@@ -182,7 +185,7 @@
     width: 525px;
   }
 
-  .hit::before {
+  .product-info__hit::before {
     bottom: 7px;
     left: -126px;
     right: unset;

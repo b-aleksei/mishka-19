@@ -4,14 +4,15 @@
 @import "abstracts/variables";
 @import "abstracts/mixins";
 @import "abstracts/global";
+@import "abstracts/button";
 @import "pages/index/header";
-@import "pages/index/header-menu";
 @import "pages/index/goods";
 @import "pages/index/product-info";
 @import "pages/index/about-us";
 @import "pages/index/feedback";
 @import "pages/index/contacts";
 @import "pages/index/footer";
+@import "pages/index/social";
 @import "pages/catalog/catalog-goods";
 @import "pages/catalog/production";
 @import "pages/form/order";
