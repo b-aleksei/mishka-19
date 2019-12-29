@@ -94,16 +94,16 @@
       background: url("../img/bg-zigzag-fill-mini.svg") repeat-x 0 15px;
       background-size: auto 34px;
       height: 34px;
-      right: calc((100vw - #{$large} + 100px) / -2);
-      left: calc((100vw - #{$large} + 100px) / -2);
+      right: calc(525px + 50vw);
+      left: calc(525px + 50vw);
     }
 
     &::before {
       content: "";
       position: absolute;
       top: 0;
-      right: calc((100vw - #{$large} + 100px) / -2);
-      left: calc((100vw - #{$large} + 100px) / -2);
+      right: calc(525px + 50vw);
+      left: calc(525px + 50vw);
       bottom: 0;
       z-index: -1;
       background-color: #f1f1f1;

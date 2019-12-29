@@ -6,8 +6,8 @@
     content: "";
     position: absolute;
     bottom: 0;
-    right: -50px;
-    left: -50px;
+    right: 0;
+    left: 0;
     height: 1px;
     background-color: $borderGray;
   }
@@ -63,6 +63,14 @@
   font-weight: 700;
   text-decoration: none;
   color: $black;
+
+  &:hover {
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  &:active {
+    color: rgba(0, 0, 0, 0.3);
+  }
 }
 
 .header__item--basket {
@@ -229,6 +237,10 @@
     display: none;
   }
 
+  .header--no-js .header__menu {
+    display: flex;
+  }
+
   .header__menu {
     display: flex;
     flex-wrap: wrap;
@@ -346,7 +358,7 @@
   }
 
   .header__item--delivery::before {
-    right: calc((100vw - #{$large} + 100px) / -2);
+    right: calc(525px + 50vw);
   }
 
   .header__item--search,

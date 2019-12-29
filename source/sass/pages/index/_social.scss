@@ -18,20 +18,13 @@
   border-bottom: 1px solid #e5e5e5;
 }
 
-.social-icon__item--fb {
-  margin: 0 40px;
+.social-icon__item:not(:first-child) {
+  margin-left: 40px;
 }
 
 @media (min-width: $medium) {
   .social-icon {
-    margin-left: calc(50% - 176px);
     padding-top: 23px;
     border-bottom: 0;
-  }
-}
-
-@media (min-width: $large) {
-  .social-icon {
-    margin-left: calc(50% - 176px);
   }
 }

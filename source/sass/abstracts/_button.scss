@@ -1,0 +1,21 @@
+.button {
+  background-color: transparent;
+  border: 2px solid $lightBlack;
+  color: $lightBlack;
+  text-transform: uppercase;
+}
+
+.product-info__button,
+.contacts__button,
+.feedback__button,
+.production__button,
+.order__button {
+  &:hover {
+    color: #ffffff;
+    background-color: $lightBlack;
+  }
+
+  &:active {
+    color: #8d8d8d;
+  }
+}

@@ -135,5 +135,7 @@ gulp.watch("source/js/*.js", gulp.series("js")).on("change", server.reload);
 gulp.watch("source/img/sprite.svg", gulp.series("copySprite", "html")).on("change", server.reload);
 });
 
+gulp.task("updater", gulp.parallel("watch", "server"));
+
 gulp.task("build", gulp.series("clean", "copy", "css", "html", "minhtml", "js"));
-gulp.task("start", gulp.parallel("server", "watch"));
+gulp.task("start", gulp.series("build", "updater"));

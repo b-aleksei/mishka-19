@@ -78,6 +78,7 @@
 }
 
 .user-data__area {
+  display: block;
   width: 100%;
   height: 142px;
   margin-top: 25px;
@@ -214,8 +215,8 @@
   }
 
   .wrap-user-data::before {
-    right: calc((100vw - #{$large} + 100px) / -2);
-    left: calc((100vw - #{$large} + 100px) / -2);
+    right: calc(525px + 50vw);
+    left: calc(525px + 50vw);
   }
 
   .user-data__contact {
@@ -232,9 +233,5 @@
 
   .user-data .user-data__margin-bottom {
     margin: 0 175px 25px 175px;
-  }
-
-  .user-data__area {
-    display: block;
   }
 }

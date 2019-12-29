@@ -6,4 +6,3 @@ navMain.classList.remove("header--no-js");
 navButton.addEventListener("click", function () {
   navMain.classList.toggle("header--opened");
 });
-

@@ -149,7 +149,7 @@
 
 @media (min-width: $large) {
   .product-info {
-    padding-left: calc(((100% - #{$large} + 100px) / 2) + 174px);
+    padding-left: calc(50% - 351px);
     padding-bottom: 94px;
     min-height: 758px;
 
@@ -157,7 +157,7 @@
       background-size: auto 21px;
       height: 21px;
       width: 1050px;
-      left: calc((100% - #{$large} + 100px) / 2);
+      left: calc(50% - 525px);
       right: unset;
     }
   }
