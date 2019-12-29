@@ -26,24 +26,23 @@
   }
 }
 
-
 .checkbox__toggle:checked + label::before {
   content: url("../img/icon-tick.svg");
-  border: 2px solid #c7c7c7;
 }
 
-.checkbox__toggle:hover + label::before {
+.checkbox__toggle:hover + label::before,
+.checkbox__toggle:focus + label::before {
   border: 2px solid $lightGreen;
+}
+
+.checkbox__toggle:active + label::before {
+  border: 2px solid #c7c7c7;
 }
 
 .checkbox__toggle:disabled + label::before {
   content: url("../img/icon-tick.svg");
   border: 2px solid $black;
   opacity: 0.4;
-}
-
-.checkbox__toggle:focus + label::before {
-  box-shadow: 0 0 0 2px blue;
 }
 
 @media (min-width: $medium) {
@@ -63,7 +62,7 @@
     margin-left: 22px;
   }
 
-  .wrap-checkbox {
+  .checkbox__wrap {
     display: flex;
     flex-wrap: wrap;
     margin-left: 145px;
@@ -100,7 +99,7 @@
     width: 26.9%;
   }
 
-  .wrap-checkbox {
+  .checkbox__wrap {
     margin-left: 153px;
   }
 

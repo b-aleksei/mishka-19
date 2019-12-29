@@ -92,20 +92,6 @@
   }
 }
 
-small {
-  @include font(14, 400, 16);
-  color: $lightBlack;
-}
-
-.order__button {
-  width: 100%;
-  margin-top: 33px;
-  padding: 15px 20px;
-  text-align: center;
-  font-weight: 700;
-  line-height: 16px;
-}
-
 .user-data__middle-name {
   margin: 18px 0 16px 0;
 }
@@ -209,18 +195,6 @@ small {
   .order__wrap-submit {
     display: flex;
     justify-content: space-between;
-
-    small {
-      margin-top: 36px;
-      font-size: 17px;
-      line-height: 30px;
-    }
-  }
-
-  .order__button {
-    width: 230px;
-    margin-top: 29px;
-    order: -1;
   }
 }
 
@@ -257,19 +231,10 @@ small {
   }
 
   .user-data .user-data__margin-bottom {
-    margin: 0 175px 22px 175px;
-    min-height: 161px;
+    margin: 0 175px 25px 175px;
   }
 
-  .order__wrap-submit {
-    margin: 0 175px 0 175px;
-
-    small {
-      margin-top: 32px;
-    }
-  }
-
-  .order__button {
-    margin-top: 24px;
+  .user-data__area {
+    display: block;
   }
 }

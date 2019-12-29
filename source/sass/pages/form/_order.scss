@@ -22,6 +22,20 @@
   color: $lightBlack;
 }
 
+.order__note {
+  @include font(14, 400, 16);
+  color: $lightBlack;
+}
+
+.order__button {
+  width: 100%;
+  margin-top: 33px;
+  padding: 15px 20px;
+  text-align: center;
+  font-weight: 700;
+  line-height: 16px;
+}
+
 @media (min-width: $medium) {
   .order {
     margin-bottom: 52px;
@@ -50,6 +64,18 @@
     font-size: 17px;
     line-height: 30px;
     margin-bottom: 49px;
+  }
+
+  .order__note {
+    margin-top: 36px;
+    font-size: 17px;
+    line-height: 30px;
+  }
+
+  .order__button {
+    width: 230px;
+    margin-top: 29px;
+    order: -1;
   }
 }
 
@@ -87,5 +113,17 @@
   .order__text {
     margin-left: 176px;
     margin-right: 146px;
+  }
+
+  .order__wrap-submit {
+    margin: 0 175px 0 175px;
+  }
+
+  .order__note {
+    margin-top: 32px;
+  }
+
+  .order__button {
+    margin-top: 24px;
   }
 }

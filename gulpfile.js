@@ -17,9 +17,9 @@ autoprefixer = require("autoprefixer"),
 server = require("browser-sync").create(),
 webp = require("gulp-webp"),
 imagemin = require("gulp-imagemin"),
-imageminJpegRecompress = require('imagemin-jpeg-recompress'),
-pngquant = require('imagemin-pngquant'),
-cache = require('gulp-cache');
+imageminJpegRecompress = require("imagemin-jpeg-recompress"),
+pngquant = require("imagemin-pngquant"),
+cache = require("gulp-cache");
 
 gulp.task("css", function () {
   return gulp.src("source/sass/style.scss")
@@ -29,8 +29,9 @@ gulp.task("css", function () {
     .pipe(postcss([
       autoprefixer()
     ]))
+    .pipe(gulp.dest("build/css"))
     .pipe(csso())
-    .pipe(rename({suffix: '.min'}))
+    .pipe(rename({suffix: ".min"}))
     .pipe(sourcemap.write("."))
     .pipe(gulp.dest("build/css"))
     .pipe(server.stream());
@@ -47,9 +48,9 @@ gulp.task("server", function () {
 });
 
 gulp.task("js", function () {
-  return gulp.src(['source/js/*.js', '!source/js/*.min.js'])
+  return gulp.src(["source/js/*.js", "!source/js/*.min.js"])
     .pipe(uglify())
-    .pipe(rename({suffix: '.min'}))
+    .pipe(rename({suffix: ".min"}))
     .pipe(gulp.dest("build/js/"));
 });
 
@@ -61,14 +62,14 @@ gulp.task("images", function () {
       imageminJpegRecompress(),
       imagemin.svgo(),
       imagemin.optipng({optimizationLevel: 3}),
-      pngquant({quality: '65-70', speed: 5})
+      pngquant({quality: "65-70", speed: 5})
     ],{
       verbose: true
     })))
     .pipe(gulp.dest("source/img/img-compress"))
 });
 
-gulp.task('clear', () =>
+gulp.task("clear", () =>
   cache.clearAll()
 );
 

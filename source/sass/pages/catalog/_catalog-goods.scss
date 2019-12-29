@@ -23,10 +23,6 @@
   @include resetList;
 }
 
-.catalog-goods__wrapper {
-  margin: 0;
-}
-
 .catalog-goods__picture {
   display: block;
   width: 100%;
@@ -39,12 +35,14 @@
   display: block;
 }
 
-.catalog-goods__name {
-  &:hover {
+.catalog-goods__wrapper {
+  margin: 0;
+
+  &:hover .catalog-goods__name {
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
   }
 
-  &:active {
+  &:active .catalog-goods__name {
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
   }
 }

@@ -22,7 +22,7 @@
   color: $black;
 }
 
-.hit {
+.product-info__hit {
   position: relative;
 
   &::before {
@@ -108,7 +108,7 @@
     line-height: 50px;
   }
 
-  .hit::before {
+  .product-info__hit::before {
     bottom: 3px;
     left: unset;
     right: 30px;
@@ -185,7 +185,7 @@
     width: 525px;
   }
 
-  .hit::before {
+  .product-info__hit::before {
     bottom: 7px;
     left: -126px;
     right: unset;
