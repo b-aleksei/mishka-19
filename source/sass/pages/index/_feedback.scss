@@ -90,6 +90,15 @@
 
   @include font(18, 700, 20);
   text-decoration: none;
+
+  &:hover {
+    color: #ffffff;
+    background-color: $lightBlack;
+  }
+
+  &:active {
+    color: #8d8d8d;
+  }
 }
 
 
@@ -201,8 +210,10 @@
 
   @media (min-resolution: 144dpi), (min-resolution: $retina-dppx) {
     .feedback {
-      background: url("../img/review@2x.jpg") no-repeat;
+      background-image: url("../img/review@2x.jpg");
+      background-repeat: no-repeat;
       background-size: 350px auto;
+      background-position: -174px -70px;
     }
   }
 }

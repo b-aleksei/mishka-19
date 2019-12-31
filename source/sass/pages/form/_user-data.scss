@@ -8,7 +8,8 @@
 
 .user-data__field {
   width: 100%;
-  margin: 3px 0;
+  height: 50px;
+  margin: 4px 0 3px 0;
   padding: 14px 0 16px 0;
   border: none;
   border-bottom: 2px solid #000000;
@@ -31,7 +32,11 @@
   }
 }
 
-.wrap-user-data p {
+.user-data__field--padding {
+  margin-top: 0;
+}
+
+.user-data__wrap-contact p {
   position: relative;
 }
 
@@ -128,7 +133,7 @@
     font-size: 19px;
   }
 
-  .wrap-user-data {
+  .user-data__wrap-contact {
     position: relative;
     margin: 50px 0 34px 0;
     padding-bottom: 50px;
@@ -136,7 +141,7 @@
     @include backgrondStrech(#f1f1f1);
   }
 
-  .wrap-user-data p {
+  .user-data__wrap-contact p {
     margin-top: 0;
     margin-bottom: 0;
   }
@@ -155,10 +160,6 @@
 
   .user-data__field--email {
     margin: 10px 0 0 0;
-  }
-
-  .color-green::before {
-    background-color: transparent;
   }
 
   .user-data__icon-phone {
@@ -192,11 +193,6 @@
     margin: 0;
     font-size: 19px;
   }
-
-  .order__wrap-submit {
-    display: flex;
-    justify-content: space-between;
-  }
 }
 
 @media (min-width: $large) {
@@ -209,14 +205,14 @@
     left: 61px;
   }
 
-  .wrap-user-data p {
+  .user-data__wrap-contact p {
     margin-top: 0;
     margin-bottom: 0;
   }
 
-  .wrap-user-data::before {
-    right: calc(525px + 50vw);
-    left: calc(525px + 50vw);
+  .user-data__wrap-contact::before {
+    right: calc(525px - 50vw);
+    left: calc(525px - 50vw);
   }
 
   .user-data__contact {

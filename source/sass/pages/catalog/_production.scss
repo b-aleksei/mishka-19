@@ -84,6 +84,15 @@
 
   @include font(17, 700, 16);
   text-decoration: none;
+
+  &:hover {
+    color: #ffffff;
+    background-color: $lightBlack;
+  }
+
+  &:active {
+    color: #8d8d8d;
+  }
 }
 
 @media (min-width: 321px) {
@@ -123,7 +132,7 @@
   .production__text {
     font-size: 15px;
     line-height: 30px;
-    margin: 0 32px 35px 39px;
+    margin: 0 35px 35px 39px;
   }
 
   .production__button {

@@ -51,7 +51,7 @@
   margin-bottom: 27px;
 }
 
-.product-info-item {
+.product-info__item {
   display: flex;
   border-bottom: 1px solid $borderGray;
   padding: 9px 0;
@@ -87,6 +87,15 @@
   font-weight: inherit;
   text-align: center;
   text-decoration: none;
+
+  &:hover {
+    color: #ffffff;
+    background-color: $lightBlack;
+  }
+
+  &:active {
+    color: #8d8d8d;
+  }
 }
 
 @media (min-width: $medium) {

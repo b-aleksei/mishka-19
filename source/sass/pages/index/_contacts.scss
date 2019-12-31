@@ -1,5 +1,5 @@
 .contacts {
-  margin: 36px 0 40px 0;
+  margin: 36px 0 39px 0;
 }
 
 .contacts__title {
@@ -9,7 +9,7 @@
 
 .contacts__info {
   font-style: normal;
-  margin-bottom: 10px;
+  margin-bottom: 9px;
 }
 
 .contacts__data {
@@ -47,7 +47,7 @@
 .contacts__map {
   background: url("../img/map-mobile@1x.jpg") no-repeat 50%;
   height: 457px;
-  margin-bottom: 35px;
+  margin-bottom: 38px;
 
   iframe {
     width: 100%;
@@ -64,6 +64,15 @@
 
   @include font(18, 700, 20);
   text-decoration: none;
+
+  &:hover {
+    color: #ffffff;
+    background-color: $lightBlack;
+  }
+
+  &:active {
+    color: #8d8d8d;
+  }
 }
 
 @media (min-resolution: 144dpi), (min-resolution: $retina-dppx) {
@@ -118,6 +127,10 @@
     width: 230px;
     margin-bottom: 57px;
     font-size: 17px;
+  }
+
+  .contacts__email {
+    padding-bottom: 3px;
   }
 
   @media (min-resolution: 144dpi), (min-resolution: $retina-dppx) {

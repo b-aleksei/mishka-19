@@ -40,7 +40,6 @@
 }
 
 .checkbox__toggle:disabled + label::before {
-  content: url("../img/icon-tick.svg");
   border: 2px solid $black;
   opacity: 0.4;
 }
@@ -91,8 +90,8 @@
 
 @media (min-width: $large) {
   .checkbox::before {
-    right: calc(525px + 50vw);
-    left: calc(525px + 50vw);
+    right: calc(525px - 50vw);
+    left: calc(525px - 50vw);
   }
 
   .checkbox p {
