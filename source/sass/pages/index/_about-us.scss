@@ -14,11 +14,6 @@
 .about-us__advantage {
   @include font(17, 700, 20);
 
-  p {
-    width: 300px;
-    margin: 0;
-  }
-
   &::before {
     content: "";
     display: flex;
@@ -28,6 +23,10 @@
     align-items: flex-end;
     margin: 20px 0;
   }
+}
+
+.about-us__advantage p {
+  margin: 0;
 }
 
 .about-us__advantage--eko::before {

@@ -1,0 +1,24 @@
+.color-green {
+  display: block;
+  position: relative;
+  width: 100%;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: $lightGreen;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 60px;
+    right: 0;
+    height: 1px;
+    background-color: $lightGreen;
+  }
+}
+
+@media (min-width: $medium) {
+  .color-green::before {
+    display: none;
+  }
+}

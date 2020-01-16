@@ -6,6 +6,7 @@
   <title>HTML Academy: Мишка</title>
   <link rel="stylesheet" href="css/style.min.css">
   <link rel="preload" href="fonts/opensans.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/opensansbold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 </head>
 <body>
 <div style="display: none;">
@@ -61,12 +62,13 @@
     <h1 class="order__title">Вязание на заказ</h1>
     <p class="order__text">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся
       с вами, чтобы уточнить детали.</p>
-    <form class="order_form" action="https://echo.htmlacademy.ru" method="get">
+    <form class="order__form" action="https://echo.htmlacademy.ru" method="get">
       <fieldset class="radio">
         <legend class="radio__title color-green">Тип</legend>
         <p><input class="radio__toggle visually-hidden" id="interior" type="radio" name="radio" checked> <label
           class="radio__label" for="interior">Аксессуар для интерьера</label></p>
-        <p><input class="radio__toggle visually-hidden" id="toy" type="radio" name="radio"> <label class="radio__label"
+        <p><input class="radio__toggle visually-hidden" id="toy" type="radio" name="radio"> <label
+          class="radio__label"
           for="toy">Детская игрушка</label></p>
       </fieldset>
       <fieldset class="checkbox">
@@ -93,13 +95,14 @@
         <p><label class="user-data__name"><span>Фамилия:</span><input class="user-data__field" type="text"
           name="last-name" placeholder="Укажите фамилию*" required></label></p>
         <p class="user-data__middle-name"><label class="user-data__name"><span>Отчество:</span><input
-          class="user-data__field" type="text" name="middle-name" placeholder="Отчество, если желаете"></label></p>
-        <div class="wrap-user-data">
+          class="user-data__field user-data__field--padding" type="text" name="middle-name"
+          placeholder="Отчество, если желаете"></label></p>
+        <div class="user-data__wrap-contact">
           <p><label class="user-data__contact user-data__contact--phone color-green"
             for="phone">тел</label> <input class="user-data__field user-data__field--phone" id="phone"
             type="tel" name="phone" pattern="\+7\s[0-9]{3}\s[0-9]{3}\s[0-9]{2}\s[0-9]{2}"
             placeholder="+7 ХХХ ХХХ ХХ ХХ*" required>
-            <svg class="user-data__icon-phone" width="24.83" height="24.33">
+            <svg class="user-data__icon-phone" width="25" height="25">
               <use xlink:href="#icon-phone"></use>
             </svg>
           </p>
