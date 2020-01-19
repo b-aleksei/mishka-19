@@ -120,6 +120,15 @@
   }
 }
 
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .header__search {
+    font-size: 17px;
+    font-weight: 700;
+    color: #000000;
+  }
+}
+
+
 .header__link--basket {
   &:hover svg,
   &:focus svg {
